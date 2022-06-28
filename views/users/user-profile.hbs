@@ -1,0 +1,14 @@
+{{#if userInSession}}
+    <h2>Bienvenido, {{ userInSession.username }}!</h2>
+    <p>Este es tu perfil</p>
+    <button>
+        <a href="/userProfile">Recargar la pagina</a>
+    </button>
+
+    <a href="/routines/create-routine">Crear Rutina</a>
+    <a href="/snacks/snacks-create">Crear Snacks</a>
+{{!-- Abcdef123 --}}
+{{!-- agregar los botones de nueva rutina y nuevo snack --}}
+{{else}}
+    <p>Todavia no estas conectado!, Lo siento</p>
+{{/if}}

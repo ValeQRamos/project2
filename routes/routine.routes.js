@@ -18,7 +18,7 @@ router.post('/create-routine',fileUploader.single('routine-image'),(req,res, nex
     .catch(error => next(error))
 })
 
-// read
+//read
 router.get('/routines',(req, res, next) =>{
   Routine.find()
     .then(routine => {
