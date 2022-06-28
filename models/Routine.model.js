@@ -18,7 +18,7 @@ const RoutineSchema = new Schema(
       require:true,
       type:String
     },
-    snacks:[{type:Schema.Types.ObjectId, ref:'Snacks'}]
+  // snacks:[{type:Schema.Types.ObjectId, ref:'Snacks'}]
   },{timestamps:true}
 )
 
