@@ -1,33 +1,13 @@
 // We reuse this import in order to have access to the `body` property in requests
 const express = require("express");
-
-// ℹ️ Responsible for the messages you see in the terminal as requests are coming in
-// https://www.npmjs.com/package/morgan
 const logger = require("morgan");
-
-// ℹ️ Needed when we deal with cookies (we will when dealing with authentication)
-// https://www.npmjs.com/package/cookie-parser
 const cookieParser = require("cookie-parser");
-
-// ℹ️ Serves a custom favicon on each request
-// https://www.npmjs.com/package/serve-favicon
 const favicon = require("serve-favicon");
-
-// ℹ️ global package used to `normalize` paths amongst different operating systems
-// https://www.npmjs.com/package/path
 const path = require("path");
-
-// ℹ️ Session middleware for authentication
-// https://www.npmjs.com/package/express-session
 const session = require("express-session");
-
-// ℹ️ MongoStore in order to save the user session in the database
-// https://www.npmjs.com/package/connect-mongo
 const MongoStore = require("connect-mongo");
-
-// Connects the mongo uri to maintain the same naming structure
 const MONGO_URI = require("../utils/consts");
-
+const mongoose = require('mongoose');
 // Middleware configuration
 module.exports = (app) => {
   // In development environment the app logs
@@ -59,6 +39,18 @@ module.exports = (app) => {
       store: MongoStore.create({
         mongoUrl: MONGO_URI,
       }),
+      cookie: {
+        sameSite: process.env.NODE_ENV === 'production' ? 'none' : 'lax',
+        secure: process.env.NODE_ENV === 'production',
+        httpOnly: true,
+        maxAge: 60000
+      },
+      store: MongoStore.create({
+        mongoUrl: process.env.MONGODB_URI || 'mongodb://localhost/basic-auth'
+ 
+        // ttl => time to live
+        // ttl: 60 * 60 * 24 // 60sec * 60min * 24h => 1 day
+      })
     })
   );
 };
