@@ -1,1 +1,24 @@
 <h1>Crea una nueva rutina</h1>
+
+<form action="/routines/create-routine" method="post" enctype="multipart/form-data">
+
+
+<label>Titulo:
+  <input type="text" name="title" placeholder="titulo de la rutina">
+</label>
+<br>
+<label>Duracion:
+  <input type="number" min="1" max="15" name="duration">
+</label>
+<br>
+<label>Descripcion:
+  <textarea name="description" cols="30" rows="5"></textarea>
+</label>
+<br>
+<label>Imagen:
+  <input type="file" name="routine-image">
+</label>
+<br>
+<button type="submit">Guardar</button>
+
+</form>

@@ -15,6 +15,7 @@ TODO Por Hacer(tarea)
 3. npm install express-session
 4. npm install connect-mongo
 5. npm install cloudinary
+6. npm install multer
 -------------------------------------------------------------------
 TODO 1 : MODELOS
 *Azdhy -> 1. crear el archivo y modelo de las recetas recomendadas.//? ((F)models/(A)Snacks.model.js)
@@ -34,5 +35,17 @@ TODO 2 : Pefil y Pruebas
 *Azdhy -> 1. hacer pruebas del login para ver si salen errores.....//? localhost
 *Vale  -> 1. hacer botones para crear y editar desde perfil........//? ((F)views/(F)users/(A)user-profile.hbs)
 *Vale  -> 2. cambiar a español auth routes.js
+
+*/
+
+
+
+/* 
+! Posibles nombres para la pagina(app);
+Quick-Fit
+
+
+
+
 
 */

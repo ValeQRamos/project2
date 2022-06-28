@@ -10,10 +10,10 @@ cloudinary.config({
 
 const storage = new CloudinaryStorage({
   cloudinary,
-  params:{
-    folder:'routine-snacks-project',
-    allowed_formats:['jpg','png','gif','mp4','pdf','webp','jpeg','svg']
+  params: {
+    allowed_formats: ['jpg','png','gif','mp4','pdf','webp','jpeg','svg'],
+    folder: 'movie-project'
   }
-})
+});
 
-module.exports = multer({storage})
+module.exports = multer({ storage });
