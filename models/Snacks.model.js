@@ -11,7 +11,7 @@ const snackSchema = new Schema(
     prepTime:String,
     cooktime:{
         default:"No aplica",
-        type:string,
+        type:String,
     },
     yiel:String
   },
