@@ -10,7 +10,6 @@ TODO Por Hacer(tarea)
 
 ? (F) = folder (A) = archivo
 ! Primero Vale agrega el login ya echo con middleware 
-! Hacer pruebas agregando las rutas al app.js pero borrarlo al final para que solo uno de los 2 lo agregue al final
 * Notas Vale
 ! instalaciones necesarias en la terminal:
 1. npm install -y
@@ -35,6 +34,5 @@ TODO 2 : Pefil y Pruebas
 ! Los botones que manden a los formularios  pueden estar dentro de un nav o solos pero solo adentro del perfil del usuario
 *Azdhy -> 1. hacer pruebas del login para ver si salen errores.....//? localhost
 *Vale  -> 1. hacer botones para crear y editar desde perfil........//? ((F)views/(F)users/(A)user-profile.hbs)
-
 
 */
