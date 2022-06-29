@@ -30,6 +30,37 @@ router.post("/snacks-create",(req,res,next)=>{
 
 })
 
+router.get("/snacks-edit/:id",(req,res,next)=>{
 
+const {id} = req.params
+SnackModel.findById(id)
+.then(snack=>{
+    res.render("snacks/edit-snacks",snack)
+})
+.catch(error =>next(error))
+
+})
+
+router.post("/snacks-edit/:id",(req,res,next)=>{
+const {id} = req.params
+
+SnackModel.findByIdAndUpdate(id,{...req.body},{new:true})
+.then(()=>{
+
+    res.redirect("/snacks/snacks-list")
+})
+.catch(error =>next(error))
+
+})
+
+router.get("/snacks-delete/:id",(req,res,next)=>{
+
+const {id} = req.params
+
+SnackModel.findByIdAndDelete(id)
+.then(()=> res.redirect("/snacks/snacks-list"))
+.catch(error =>next(error))
+
+})
 
 module.exports= router;

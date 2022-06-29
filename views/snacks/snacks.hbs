@@ -1,7 +1,8 @@
 <h1>Lista de Snacks</h1>
 
 {{#each snacks}}
-    <p>Nombre:{{name}}</p>
+<div>
+    <h3>Nombre:{{name}}</h3>
     <p>Reseña:{{resena}}</p>
     <p>Ingredientes:{{ingredients}}</p>
     <p>Instrucciones:{{instructions}}</p>
@@ -9,4 +10,8 @@
     <p>Tiempo de preparacion: {{prepTime}}</p> 
     <p>Tiempo de coccion: {{cooktime}}</p> 
     <p>Rinde para:  {{yiel}} </p> 
+
+    <a href="snacks-edit/{{id}}">Editar Snack</a>
+    <a href="snacks-delete/{{id}}">Borrar Snack</a>
+</div>
 {{/each}}
