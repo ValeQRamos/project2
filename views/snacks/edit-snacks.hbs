@@ -1,0 +1,32 @@
+<h1>Editar Snack</h1>
+
+<form action="/snacks/snacks-edit/{{id}}" method="post">
+
+<label for="">Nombre</label>
+<input type="text" name="name" placeholder="nombre" value="{{name}}">
+<br>
+<label for="">Reseña</label>
+<input type="text" name="resena" placeholder="reseña" value="{{resena}}">
+<br>
+<label for="">Ingredientes</label>
+<input type="text" name="ingredients" placeholder="ingredientes" value="{{ingredients}}">
+<br>
+<label for="">Informacion Nutricional</label>
+<input type="text" name="nutritionFacts" placeholder="info. nutricional" value="{{nutritionFacts}}">
+<br>
+<label for="">Tiempo de preparacion</label>
+<input type="text" name="prepTime" placeholder="T. de preparacion" value="{{prepTime}}">
+<br>
+<label for="">Tiempo de coccion</label>
+<input type="text" name="cooktime" placeholder="T. de coccion" value="{{cooktime}}">
+<br>
+<label for="">Rinde para:</label>
+<input type="text" name="yiel" placeholder="porciones" value="{{yiel}}">
+
+
+<button type="submit">Guardar</button>
+
+
+
+
+</form>
