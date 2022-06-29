@@ -2,11 +2,14 @@
 
 {{#each routine}}
   <div>
+    <a href="routines/{{_id}}/edit">Edit</a> |
+    <a href="routines/{{_id}}/delete">Delete</a>
     <div>
       <img src="{{imageUrl}}">
     </div>
     <h1>Titulo : {{title}}</h1>
     <h3>Duracion: {{duration}}</h3>
     <p>Descripcion: {{description}}</p>
+    
   </div>
 {{/each}}

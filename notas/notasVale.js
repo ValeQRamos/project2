@@ -25,10 +25,10 @@ TODO 1 : MODELOS
 *         5. crear la vista de formulario para editar snacks.......//? ((F)views/(F)snacks/(A)edit-snacks.hbs)
 
 // *Vale  -> 1. crear el archivo y modelo de los ejercicios...........//? ((F)models/(A)Routine.model.js)
-*         2. crear el archivo y rutas CRUD de las rutinas..........//? ((F)routes/(A)routine.routes.js)
-*         3. crear la vista de todas las rutinas...................//? ((F)vies/(F)routines/(A)routines.hbs)
-*         4. crear la vista de formulario para crear rutinas.......//? ((F)views/(F)routines/(A)new-routine.hbs)
-*         5. crear la vista de formulario para editar rutinas......//? ((F)views/(F)routines/(A)edit-routine.hbs)
+// *         2. crear el archivo y rutas CRUD de las rutinas..........//? ((F)routes/(A)routine.routes.js)
+// *         3. crear la vista de todas las rutinas...................//? ((F)vies/(F)routines/(A)routines.hbs)
+// *         4. crear la vista de formulario para crear rutinas.......//? ((F)views/(F)routines/(A)new-routine.hbs)
+// *         5. crear la vista de formulario para editar rutinas......//? ((F)views/(F)routines/(A)edit-routine.hbs)
 --------------------------------------------------------------------
 TODO 2 : Pefil y Pruebas
 ! Los botones que manden a los formularios  pueden estar dentro de un nav o solos pero solo adentro del perfil del usuario
@@ -44,13 +44,18 @@ TODO 2 : Pefil y Pruebas
 ! Posibles nombres para la pagina(app);
 Quick-Fit
 
-
-
-
-
 */
 
 
 /* 
 !
+*/
+
+
+
+/* 
+Links de gifs de ejercicios:
+
+https://giphy.com/gifs/8fit-fitness-squat-322W9dk1XC1esd8uyd
+https://giphy.com/gifs/8fit-23hPPMRgPxbNBlPQe3
 */

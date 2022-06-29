@@ -1,0 +1,24 @@
+<h1>Editar Rutina</h1>
+
+<form action="/routines/routines/{{_id}}/edit" method="post" enctype="multipart/form-data">
+
+
+<label>Titulo:
+  <input type="text" name="title" value="{{title}}">
+</label>
+<br>
+<label>Duracion:
+  <input type="number" min="1" max="15" name="duration" value="{{duration}}">
+</label>
+<br>
+<label>Descripcion:
+  <textarea name="description" cols="30" rows="5">{{description}}</textarea>
+</label>
+<br>
+<label>Imagen:
+  <input type="file" name="routine-image" value="{{imageUr}}">
+</label>
+<br>
+<button type="submit">Guardar</button>
+
+</form>
