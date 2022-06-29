@@ -23,11 +23,7 @@ router.post("/snacks-create",(req,res,next)=>{
     const {...allInfo} = req.body
     
     SnackModel.create(allInfo)
-   console.log("Que hay en snack mode",allInfo)
-    .then(snacks=>{
-        console.log("Que hay en snack mode",snacks)
-        res.redirect("/ejemplo",snacks)
-    })
+    .then(()=>res.redirect("snacks-list"))
     .catch(error=>{
         next (error)
     })

@@ -14,8 +14,8 @@ TODO Por Hacer(tarea)
 2. npm install bcryptjs
 3. npm install express-session
 4. npm install connect-mongo
-5. npm install cloudinary
-6. npm install multer
+5. npm install cloudinary multer multer-storage-cloudinary
+
 -------------------------------------------------------------------
 TODO 1 : MODELOS
 *Azdhy -> 1. crear el archivo y modelo de las recetas recomendadas.//? ((F)models/(A)Snacks.model.js)
