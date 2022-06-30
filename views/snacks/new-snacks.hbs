@@ -1,27 +1,35 @@
 <h1>Nuevo Snack</h1>
 
-<form action="/snacks/snacks-create" method="post">
+<form action="/snacks/snacks-create" method="post" enctype="multipart/form-data">
 
+<label for="">Imagen</label>
+<input type="file" name="snack-image">
+<br>
 <label for="">Nombre</label>
 <input type="text" name="name" placeholder="nombre">
 <br>
 <label for="">Reseña</label>
 <input type="text" name="resena" placeholder="reseña">
 <br>
-<label for="">Ingredientes</label>
-<input type="text" name="ingredients" placeholder="ingredientes">
+<label for="">Ingredientes
+<textarea  name="ingredients" id="" cols="20" rows="10" ></textarea>
+</label>
+<br>
+<label for="">Instrucciones
+<textarea name="instructions" id="" cols="20" rows="10"></textarea>
+</label>
 <br>
 <label for="">Informacion Nutricional</label>
-<input type="text" name="nutritionFacts" placeholder="info. nutricional">
+<input type="number" name="nutritionFacts" placeholder="info. nutricional">calorias
 <br>
 <label for="">Tiempo de preparacion</label>
-<input type="text" name="prepTime" placeholder="T. de preparacion">
+<input type="number" name="prepTime" placeholder="T. de preparacion">min
 <br>
 <label for="">Tiempo de coccion</label>
-<input type="text" name="cooktime" placeholder="T. de coccion">
+<input type="number" name="cooktime" placeholder="T. de coccion">min
 <br>
 <label for="">Rinde para:</label>
-<input type="text" name="yiel" placeholder="porciones">
+<input type="number" name="yiel" placeholder="porciones">porciones
 
 
 <button type="submit">Guardar</button>

@@ -7,4 +7,12 @@ TODO 1 : MODELOS
 *         4. crear la vista de formulario para crear snacks........//? ((F)views/(F)snacks/(A)new-snacks.hbs)
 *         5. crear la vista de formulario para editar snacks.......//? ((F)views/(F)snacks/(A)edit-snacks.hbs)
 
+
+    faltan img snacks y pulir modelo 
+    has-text-centered
+is-multiline
+is-size-4
+has-text-info
+has-text-dark
+
 */
