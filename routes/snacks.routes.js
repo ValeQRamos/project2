@@ -23,9 +23,9 @@ router.get("/snacks-create",(req,res,next)=>{
 
 router.post("/snacks-create",fileUploader.single("snack-image"),(req,res,next)=>{
 
-    const {imageUrl,...allInfo} = req.body
+    const {name,resena,ingredients,instructions,nutritionFacts,prepTime,cooktime,yiel} = req.body
     
-    SnackModel.create({allInfo,imageUrl:req.file.path})
+    SnackModel.create({name,resena,ingredients,instructions,nutritionFacts,prepTime,cooktime,yiel,imageUrl:req.file.path})
     .then(()=>res.redirect("snacks-list"))
     .catch(error=>{
         next (error)
@@ -44,10 +44,15 @@ SnackModel.findById(id)
 
 })
 
-router.post("/snacks-edit/:id",(req,res,next)=>{
+router.post("/snacks-edit/:id",fileUploader.single("snack-image"),(req,res,next)=>{
 const {id} = req.params
+const {name,resena,ingredients,instructions,nutritionFacts,prepTime,cooktime,yiel,existingImage} = req.body
+let imageUrl;
 
-SnackModel.findByIdAndUpdate(id,{...req.body},{new:true})
+if (req.file){imageUrl= req.file.path}
+else {imageUrl= existingImage}
+
+SnackModel.findByIdAndUpdate(id,{name,resena,ingredients,instructions,nutritionFacts,prepTime,cooktime,yiel,existingImage},{new:true})
 .then(()=>{
 
     res.redirect("/snacks/snacks-list")

@@ -1,0 +1,31 @@
+<h1>Lista de ejercicios</h1>
+
+<table>
+<thead>
+    <tr>
+        <th>Ilustracion</th>
+        <th>Ejercicio</th>
+        <th>Series</th>
+        <th>Repeticiones</th>
+        <th>Descansos</th>
+    </tr>
+</thead>
+
+{{#each exercise}}
+<tr>
+    <td>
+        <a href="/">Editar</a>
+        <a href="/">Borrar</a>
+
+    </td>
+    <td>{{imageUrl}}</td>
+    <td>{{excersice}}</td>
+    <td>{{series}}</td>
+    <td>{{repetitions}}</td>
+    <td>{{break}}</td>
+
+
+
+</tr>
+{{/each}}
+</table>

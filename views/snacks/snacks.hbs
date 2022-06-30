@@ -1,31 +1,31 @@
 <h1 class="title has-text-warning has-text-centered">Lista de Snacks</h1>
 
-<div class="columns is-multiline">
+<div class=" columns is-multiline ">
 {{#each snacks}}
-<div class="column is-4 card  has-background-grey-dark  has-text-white">
-    <div>
-    <img src="{{imageUrl}}" width="100" height="100">
-    <h3 class="is-size-5 has-text-warning">Nombre:{{name}}</h3>
-    <p>Reseña:{{resena}}</p>
-    <p>Ingredientes:{{ingredients}}</p>
-    <p>Instrucciones:{{instructions}}</p>
-    <p>Informacion nutricional: {{nutritionFacts}}</p>
-    <p>Tiempo de preparacion: {{prepTime}}</p> 
-    <p>Tiempo de coccion: {{cooktime}}</p> 
-    <p>Rinde para:  {{yiel}} </p> 
-
-{{#if ../userInSession}}
-
+<div class=" column  is-4 ">
+    <div class=" card has-background-grey-dark  has-text-white p-4">
+                <div  class="card-image has-text-centered p-3">
+                     <img src="{{imageUrl}}" width="400" height="300" >
+                </div>
+                <div>
+                     <h3 class="is-size-5 has-text-warning">{{name}}</h3><br>
+                     <p>Reseña:{{resena}}</p>
+                     <p>Ingredientes:{{ingredients}}</p>
+                    <p>Instrucciones:{{instructions}}</p>
+                    <p>Informacion nutricional: {{nutritionFacts}}</p>
+                    <p>Tiempo de preparacion: {{prepTime}}</p> 
+                    <p>Tiempo de coccion: {{cooktime}}</p> 
+                    <p>Rinde para:  {{yiel}} </p> 
+                </div>
+          {{#if ../userInSession}}            
+<footer class="card-footer ">
     <a class="button is-warning is-ligh is-small" href="snacks-edit/{{id}}">Editar Snack</a>
     <a class="button is-small" href="snacks-delete/{{id}}">Borrar Snack</a>
+</footer>
+                       {{/if }}
 
-{{/if }}
-
-</div>
-
-
+    </div>
 
 </div>
 {{/each}}
 </div>
-{{userInSession.email}}

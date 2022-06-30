@@ -1,27 +1,35 @@
 <h1>Editar Snack</h1>
 
-<form action="/snacks/snacks-edit/{{id}}" method="post">
+<form action="/snacks/snacks-edit/{{id}}" method="post" enctype="multipart/form-data">
 
+<label for="">Imagen</label>
+<input type="file" name="snack-image" value="{{imageUrl}}">
+<br>
 <label for="">Nombre</label>
 <input type="text" name="name" placeholder="nombre" value="{{name}}">
 <br>
 <label for="">Reseña</label>
 <input type="text" name="resena" placeholder="reseña" value="{{resena}}">
 <br>
-<label for="">Ingredientes</label>
-<input type="text" name="ingredients" placeholder="ingredientes" value="{{ingredients}}">
+<label for="">Ingredientes
+<textarea  name="ingredients" id="" cols="20" rows="10" >{{ingredients}}</textarea>
+</label>
+<br>
+<label for="">Instrucciones
+<textarea name="instructions" id="" cols="20" rows="10">{{instructions}}</textarea>
+</label>
 <br>
 <label for="">Informacion Nutricional</label>
-<input type="text" name="nutritionFacts" placeholder="info. nutricional" value="{{nutritionFacts}}">
+<input type="number" name="nutritionFacts" placeholder="info. nutricional" value="{{nutritionFacts}}">calorias
 <br>
 <label for="">Tiempo de preparacion</label>
-<input type="text" name="prepTime" placeholder="T. de preparacion" value="{{prepTime}}">
+<input type="number" name="prepTime" placeholder="T. de preparacion" value="{{prepTime}}">min
 <br>
 <label for="">Tiempo de coccion</label>
-<input type="text" name="cooktime" placeholder="T. de coccion" value="{{cooktime}}">
+<input type="number" name="cooktime" placeholder="T. de coccion" value="{{cooktime}}">min
 <br>
 <label for="">Rinde para:</label>
-<input type="text" name="yiel" placeholder="porciones" value="{{yiel}}">
+<input type="number" name="yiel" placeholder="porciones" value="{{yiel}}">porciones
 
 
 <button type="submit">Guardar</button>
