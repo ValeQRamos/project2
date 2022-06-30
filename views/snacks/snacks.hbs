@@ -1,8 +1,11 @@
-<h1>Lista de Snacks</h1>
+<h1 class="title has-text-warning has-text-centered">Lista de Snacks</h1>
 
+<div class="columns is-multiline">
 {{#each snacks}}
-<div>
-    <h3>Nombre:{{name}}</h3>
+<div class="column is-4 card  has-background-grey-dark  has-text-white">
+    <div>
+    <img src="{{imageUrl}}" width="100" height="100">
+    <h3 class="is-size-5 has-text-warning">Nombre:{{name}}</h3>
     <p>Reseña:{{resena}}</p>
     <p>Ingredientes:{{ingredients}}</p>
     <p>Instrucciones:{{instructions}}</p>
@@ -11,7 +14,18 @@
     <p>Tiempo de coccion: {{cooktime}}</p> 
     <p>Rinde para:  {{yiel}} </p> 
 
-    <a href="snacks-edit/{{id}}">Editar Snack</a>
-    <a href="snacks-delete/{{id}}">Borrar Snack</a>
+{{#if ../userInSession}}
+
+    <a class="button is-warning is-ligh is-small" href="snacks-edit/{{id}}">Editar Snack</a>
+    <a class="button is-small" href="snacks-delete/{{id}}">Borrar Snack</a>
+
+{{/if }}
+
+</div>
+
+
+
 </div>
 {{/each}}
+</div>
+{{userInSession.email}}

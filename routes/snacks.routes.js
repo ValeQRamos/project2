@@ -1,13 +1,16 @@
 const router= require ("express").Router()
 const SnackModel = require("../models/Snacks.model")
 const mongoose = require('mongoose');
+const fileUploader = require("../config/cloudinary.config")
+
 
 
 router.get("/snacks-list",(req,res,next)=>{
-
+    
     SnackModel.find()
-    .then(snacks=>{
-        res.render("snacks/snacks",{snacks})
+    .then(snacks=>{   
+        console.log("que es..",req.session)                     
+        res.render("snacks/snacks",{snacks,userInSession: req.session.currentUser})
     })
     .catch(error=>{
         next (error)
@@ -18,11 +21,11 @@ router.get("/snacks-create",(req,res,next)=>{
     res.render ("snacks/new-snacks")
 })
 
-router.post("/snacks-create",(req,res,next)=>{
+router.post("/snacks-create",fileUploader.single("snack-image"),(req,res,next)=>{
 
-    const {...allInfo} = req.body
+    const {imageUrl,...allInfo} = req.body
     
-    SnackModel.create(allInfo)
+    SnackModel.create({allInfo,imageUrl:req.file.path})
     .then(()=>res.redirect("snacks-list"))
     .catch(error=>{
         next (error)
