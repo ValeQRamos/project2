@@ -1,49 +1,51 @@
+
 <nav class="navbar is-dark">
   <div class="navbar-brand">
-    <div class="nabar-item m-2">
-      <img src="images/logo.png" alt="site logo" style="max-height:60px" class="py-2 px-2">
+    <div class="navbar-item">
+      <img src="images/logo.png" alt="logo" style="max-height:60px" class="py-2 px-2">
     </div>
+    <a class="navbar-burger" id="burger">
+      <span></span>
+      <span></span>
+      <span></span>
+    </a>
   </div>
-
-  <div class="navbar-menu">
-    <div class="navbar-end is-size-5">
-      <a class="navbar-item" href="/signup"><span class="btnIndex">Registro</span></a>
-      <a class="navbar-item" href="/login"><span class="btnIndex">Conexion</span></a>
+  <div class="navbar-menu" id="nav-links">
+    <div class="navbar-end">
+      <a href="/signup" class="navbar-item">
+        <span class="is-size-5 yellow">Registro</span>
+      </a>
+      <a href="/login" class="navbar-item">
+        <span class="is-size-5 yellow">Conexion</span>
+      </a>
     </div>
   </div>
 </nav>
+{{!-- --------------------------------------------------------------------------- --}}
+<div id="background-image" class="p-0">
+    <div class="container p-6">
+      <div class="columns">
+        <div class="column is-12">
+          <div class="card">
 
-<div id="background-image">
-  <div class="container">
-    <div>
-      <h1 class="is-size-1 has-text-centered has-text-light">Power Training</h1>
+            <div class="card-content has-background-grey-dark">
+              <p class="is-size-1 has-text-centered has-text-white-ter p-2">Power Training</p>
+              <p class="subtitle has-text-centered has-text-white-ter">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Magni deleniti excepturi, molestiae ratione, beatae veniam perspiciatis iure molestias voluptas fuga cum perferendis eius totam placeat a, consequatur mollitia facilis consequuntur!</p>
+              <br>
+              <p class="subtitle has-text-centered has-text-white-ter">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Magni deleniti excepturi, molestiae ratione, beatae veniam perspiciatis iure molestias voluptas fuga cum perferendis eius totam placeat a, consequatur mollitia facilis consequuntur!</p>
+            </div>
+
+            <footer class="card-footer has-background-white-ter">
+              <div class="card-footer-item">
+                <a class="button is-medium is-dark is-rounded" href="/routines/routines">Ver todas las rutinas</a>
+              </div>
+              <div class="card-footer-item">
+                <a class="button is-medium is-dark is-rounded" href="/snacks/snacks-list">Todos los snacks</a>
+              </div>
+            </footer>
+
+          </div>
+        </div>
+      </div>
     </div>
-    <div>
-      <a class="button is-large" href="/routines/routines">Ver Todas las rutinas</a>
-      <a class="button is-large" href="/snacks/snacks-list">Ver Todos los snacks</a>
-    </div>
-  </div>
 </div>
-
-
-
-{{!-- 
-
-<div id="background-image">
-  <div class="container">
-    <div>
-      <h1 class="is-size-1 has-text-centered has-text-light">Titulo</h1>
-    </div>
-  </div>
-</div>
-
-
- --}}
-
-
- {{!-- 
- 
- <a class="button is-large" href="/routines/routines">Ver Todas las rutinas</a>
-    <a class="button is-large" href="/snacks/snacks-list">Ver Todos los snacks</a>
- 
-  --}}

@@ -16,6 +16,10 @@ a {
   height: 100vh;
 }
 
-.btnIndex{
+.yellow{
   color: #FEE101;
+}
+
+.yellowBg{
+  background-color: #FEE101;
 }
