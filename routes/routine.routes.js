@@ -1,5 +1,5 @@
 const router = require('express').Router();
-const Routine = require('../models/Routine.model');
+const Example = require('../models/Example.model');
 const fileUploader = require('../config/cloudinary.config');
 
 
@@ -9,15 +9,15 @@ router.get('/create-routine',(req,res, next) =>{
 })
 //create ------
 router.post('/create-routine',fileUploader.single('routine-image'),(req,res, next) => {
-  const {title, duration, description} = req.body
-  Routine.create({title, duration, description, imageUrl:req.file.path})
+  const {title, difficulty, description} = req.body
+  Example.create({title, difficulty, description, imageUrl:req.file.path})
     .then(() => res.redirect('routines'))
     .catch(error => next(error))
 })
 
 //read ------
 router.get('/routines',(req, res, next) =>{
-  Routine.find()
+  Example.find()
     .then(routine => res.render('routines/routines',{routine}))
 })
 
@@ -25,20 +25,20 @@ router.get('/routines',(req, res, next) =>{
 router.get('/routines/:id/edit',(req, res, next) =>{
   const {id} = req.params
 
-  Routine.findById(id)
+  Example.findById(id)
     .then(routineToEdit => res.render('routines/edit-routine.hbs',routineToEdit))
     .catch(error => next(error))
 })
 //update ------
 router.post('/routines/:id/edit',fileUploader.single('routine-image'),(req,res, next) =>{
   const {id} = req.params
-  const {title, duration ,description, existingImage} = req.body;
+  const {title, difficulty ,description, existingImage} = req.body;
   let imageUrl;
 
   if(req.file){ imageUrl = req.file.path } 
   else { imageUrl = existingImage }
 
-  Routine.findByIdAndUpdate(id, {title, duration, description, imageUrl},{new:true})
+  Example.findByIdAndUpdate(id, {title, difficulty, description, imageUrl},{new:true})
     .then(() => res.redirect('/routines/routines'))
     .catch(error => next(error))
 })
@@ -46,7 +46,7 @@ router.post('/routines/:id/edit',fileUploader.single('routine-image'),(req,res, 
 //delete ------
 router.get('/routines/:id/delete',(req, res, next) => {
   const {id} = req.params
-  Routine.findByIdAndRemove(id)
+  Example.findByIdAndRemove(id)
     .then(() => res.redirect('/routines/routines'))
     .catch(error => next(error))
 })

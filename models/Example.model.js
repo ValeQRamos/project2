@@ -1,7 +1,7 @@
 const mongoose = require('mongoose');
 const {Schema, model} = mongoose
 
-const RoutineSchema = new Schema(
+const exampleSchema = new Schema(
   {
     imageUrl:{
       type:String
@@ -10,16 +10,15 @@ const RoutineSchema = new Schema(
       require:true,
       type:String
     },
-    duration:{
+    difficulty:{
       require:true,
-      type:Number
+      type:String
     },
     description:{
       require:true,
       type:String
     },
-  // snacks:[{type:Schema.Types.ObjectId, ref:'Snacks'}]
   },{timestamps:true}
 )
 
-module.exports = model('Routine', RoutineSchema);
+module.exports = model('Routine', exampleSchema);
