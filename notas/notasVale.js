@@ -29,6 +29,7 @@ TODO 1 : MODELOS
 // *         3. crear la vista de todas las rutinas...................//? ((F)vies/(F)routines/(A)routines.hbs)
 // *         4. crear la vista de formulario para crear rutinas.......//? ((F)views/(F)routines/(A)new-routine.hbs)
 // *         5. crear la vista de formulario para editar rutinas......//? ((F)views/(F)routines/(A)edit-routine.hbs)
+*            6. dar un poco de formato al index, layout  y routines/routines
 --------------------------------------------------------------------
 TODO 2 : Pefil y Pruebas
 ! Los botones que manden a los formularios  pueden estar dentro de un nav o solos pero solo adentro del perfil del usuario
