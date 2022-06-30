@@ -1,3 +1,5 @@
+/* #FEE101    <---- color del logo*/
+/* #F0C200    <---- amarillo del wallpaper */
 body {
   padding: 50px;
   font: 14px "Lucida Grande", Helvetica, Arial, sans-serif;
@@ -7,7 +9,13 @@ a {
   color: #00b7ff;
 }
 
-h1 {
-  color: 15px;
+#background-image{
+  background-image: url('../images/wallpaper.jpg');
+  background-size: cover;
+  background-repeat: no-repeat;
+  height: 100vh;
 }
 
+.btnIndex{
+  color: #FEE101;
+}
