@@ -14,15 +14,15 @@
 {{#each exercise}}
 <tr>
     <td>
-        <a href="/">Editar</a>
-        <a href="/">Borrar</a>
+        <a href="/exercise/exercise-edit/{{id}}">Editar</a>
+        <a href="/exercise/exercise-delete/{{id}}">Borrar</a>
 
     </td>
-    <td>{{imageUrl}}</td>
+    <td><figure class="image is-1by2"><img src="{{imageUrl}}" alt=""></figure> </td>
     <td>{{excersice}}</td>
     <td>{{series}}</td>
     <td>{{repetitions}}</td>
-    <td>{{break}}</td>
+    <td>{{breaks}}</td>
 
 
 

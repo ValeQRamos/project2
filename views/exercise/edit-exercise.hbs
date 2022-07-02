@@ -1,0 +1,23 @@
+<h1>Editar rutina</h1>
+
+
+<form action="/exercise/exercise-edit/{{id}}" method="post" enctype="multipart/form-data">
+
+<label for="">Ilustracion</label>
+<input type="file" name="exercise-image" value="{{imageUrl}}">
+
+<label for="">Ejercicio</label>
+<input type="text" name="exercise"  value="exercise">
+
+<label for="">Series</label>
+<input type="number" name="series"  value="{{series}}">
+
+<label for="">Repeticiones</label>
+<input type="number" name="repetitions" value="{{repetitions}}">
+
+<label for="">Descanso</label>
+<input type="number" name="breaks" value="{{breaks}}">seg
+
+<button type="submit">Guardar</button>
+
+</form>

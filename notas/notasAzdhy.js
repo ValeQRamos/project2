@@ -8,7 +8,8 @@ TODO 1 : MODELOS
 //        5. crear la vista de formulario para editar snacks.......//? ((F)views/(F)snacks/(A)edit-snacks.hbs)
 *         6. crear modelo y rutas de excercises model 
 // revisar porque al editar un snack se quita es login y hay que volver a entrar
-
+** PREGUNTAR COMO VER LA BASE DE DATOS EN ATLAS
+***link ejercicios https://www.segurosfielseg.com/boletines/5-rutinas-de-ejercicios-para-hacer-en-casa/
 
     faltan img snacks y pulir modelo 
     has-text-centered

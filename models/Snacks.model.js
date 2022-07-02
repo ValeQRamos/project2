@@ -16,11 +16,11 @@ const snackSchema = new Schema(
     resena:String,
 
     ingredients:{
-      type:String,
+      type:[String],
       require:true,
     }, 
     instructions:{
-      type:String,
+      type:[String],
       require:true,
     }, 
     nutritionFacts:{
