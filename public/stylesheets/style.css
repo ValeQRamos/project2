@@ -23,3 +23,31 @@ a {
 .yellowBg{
   background-color: #FEE101;
 }
+
+.background-snacks{
+  background-image: url("../images/logo1.jpg");
+  background-size: cover;
+  background-repeat: no-repeat;
+ 
+}
+
+.form-snack-create{
+  text-align: left;
+  padding-left: 350px;
+  width: 900px;
+  
+ 
+}
+
+.pd-btn{
+  padding-left: 200px;
+  padding-top: 10px;
+}
+
+/*PROBLEMAS CON OPACIDAD */
+.background-snacks-create{
+  background-image: url("../images/logo-opacity.png");
+ 
+  background-size: cover;
+  background-repeat: no-repeat;
+}

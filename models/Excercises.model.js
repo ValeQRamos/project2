@@ -18,7 +18,7 @@ const exerciseSchema = new Schema(
       require:true,
       type:Number,
     },
-    break:{
+    breaks:{
         require:true,
         type:Number
 
