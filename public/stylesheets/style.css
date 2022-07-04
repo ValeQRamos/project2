@@ -59,3 +59,15 @@ a {
   height: 420px;
 }
 
+.snack-edit{
+  width: 960px;
+  padding-left: 400px;
+}
+
+.snack-edit-btn{
+  text-align: center;
+}
+.create-exercise{
+  width: 960px;
+  padding-left: 400px;
+}

@@ -1,23 +1,62 @@
-<h1>Nueva rutina</h1>
+<nav class="navbar is-dark">
+  <div class="navbar-brand">
+    <div class="navbar-item">
+      <a href="/"><img src="../images/logo.png" alt="logo" style="max-height:60px" class="py-2 px-2"></a>
+    </div>
+    <a class="navbar-burger" id="burger">
+      <span></span>
+      <span></span>
+      <span></span>
+    </a>
+  </div>
+  <div class="navbar-menu" id="nav-links">
+    <div class="navbar-end">
+      <a href="https://www.trainingaroundtheworld.com/blog/como-encontrar-la-motivacion-para-hacer-ejercicio" class="navbar-item">
+        <span class="is-size-7 yellow">Para saber mas..</span>
+      </a>
+      <a href="/login" class="navbar-item">
+        <span class="is-size-7 yellow">Blog</span>
+      </a>
+    </div>
+  </div>
+</nav>
+
+<h1 class="is-size-1 has-text-centered mb-5 yellow">Nueva rutina</h1>
 
 
-<form action="/exercise/exercise-create" method="post" enctype="multipart/form-data">
+<form class="form" action="/exercise/create-exercise" method="post" enctype="multipart/form-data">
 
-<label for="">Ilustracion</label>
-<input type="file" name="exercise-image">
+<div class="create-exercise">
+<label class="label">Ilustracion</label>
+<input class="input" type="file" name="exercise-image">
 
-<label for="">Ejercicio</label>
-<input type="text" name="exercise" >
+<label class="label">Ejercicio</label>
+<input class="input" type="text" name="exercise" placeholder="Nombre ejercicio" >
 
-<label for="">Series</label>
-<input type="number" name="series" >
+<label class="label">Series</label>
+<input class="input" type="number" name="series" placeholder="No.de series"  min="0" max="60">
 
-<label for="">Repeticiones</label>
-<input type="number" name="repetitions" >
+<label class="label">Repeticiones</label>
+<input class="input" type="number" name="repetitions" placeholder="No. de repeticiones"  min="0" max="60">
 
-<label for="">Descanso</label>
-<input type="number" name="breaks" >seg
+<label class="label">Descanso</label>
+<input class="input" type="number" name="breaks"  placeholder="seg"  min="0" max="60">
 
-<button type="submit">Guardar</button>
-
+<button class="button" type="submit">Guardar</button>
+</div>
 </form>
+
+<footer class="footer has-background-grey-lighter pt-4 pb-4">
+   <div class="content has-text-right">
+    <p>
+      <img src="/images/social-media.png" width="80" height="80"><br><br>
+       <img src="/images/social-media2.png" width="80" height="80">
+    </p>
+  </div>
+  <div class="content has-text-centered ">
+    <p class="pb-5 ">
+      <strong>Power Training</strong> by Azdhy Galvan and Valentin Quiroga
+    </p>
+  </div>
+  
+</footer>

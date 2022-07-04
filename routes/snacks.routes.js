@@ -17,11 +17,11 @@ router.get("/snacks-list",(req,res,next)=>{
     })
 })
 
-router.get("/snacks-create",(req,res,next)=>{
+router.get("/create-snacks",(req,res,next)=>{
     res.render ("snacks/new-snacks")
 })
 
-router.post("/snacks-create",fileUploader.single("snack-image"),(req,res,next)=>{
+router.post("/create-snacks",fileUploader.single("snack-image"),(req,res,next)=>{
 
     const {name,resena,ingredients,instructions,nutritionFacts,prepTime,cooktime,yiel} = req.body
     

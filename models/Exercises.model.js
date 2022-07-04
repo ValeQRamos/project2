@@ -6,7 +6,7 @@ const exerciseSchema = new Schema(
     imageUrl:{
       type:String
     },
-    excersice:{
+    exercise:{
       require:true,
       type:String
     },
