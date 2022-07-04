@@ -1,5 +1,5 @@
 const router = require("express").Router()
-const ExerciseModel= require("../models/Excercises.model")
+const ExerciseModel= require("../models/Exercises.model")
 const fileUploader = require ("../config/cloudinary.config")
 
 
@@ -12,11 +12,11 @@ router.get("/exercise-list",(req,res,next)=>{
     })
 })
 
-router.get("/exercise-create",(req,res,next)=>{
+router.get("/create-exercise",(req,res,next)=>{
     res.render("exercise/new-exercise")
 })
 
-router.post("/exercise-create",fileUploader.single("exercise-image"),(req,res,next)=>{
+router.post("/create-exercise",fileUploader.single("exercise-image"),(req,res,next)=>{
 
 const {exercise,series,repetitions,breaks}= req.body
 

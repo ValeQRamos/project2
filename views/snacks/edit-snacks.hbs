@@ -1,42 +1,107 @@
-<h1>Editar Snack</h1>
+<nav class="navbar is-dark">
+  <div class="navbar-brand">
+    <div class="navbar-item">
+      <a href="/"><img src="/images/logo.png" alt="logo" style="max-height:60px" class="py-2 px-2"></a>
+    </div>
+    <a class="navbar-burger" id="burger">
+      <span></span>
+      <span></span>
+      <span></span>
+    </a>
+  </div>
+  <div class="navbar-menu" id="nav-links">
+    <div class="navbar-end">
+      <a href="https://www.trainingaroundtheworld.com/blog/como-encontrar-la-motivacion-para-hacer-ejercicio" class="navbar-item">
+        <span class="is-size-7 yellow">Para saber mas..</span>
+      </a>
+      <a href="/login" class="navbar-item">
+        <span class="is-size-7 yellow">Blog</span>
+      </a>
+    </div>
+  </div>
+</nav>
+
+<h1 class="is-size-2 has-text-weight-bold has-text-centered is-italic">Editar Snack</h1><br>
+
+<div  class="snack-edit  ">
 
 <form action="/snacks/snacks-edit/{{id}}" method="post" enctype="multipart/form-data">
 
-<label for="">Imagen</label>
-<input type="file" name="snack-image" value="{{imageUrl}}">
-<br>
-<label for="">Nombre</label>
-<input type="text" name="name" placeholder="nombre" value="{{name}}">
-<br>
-<label for="">Reseña</label>
-<input type="text" name="resena" placeholder="reseña" value="{{resena}}">
-<br>
-<label for="">Ingredientes
-<input type="text" name="ingredients"  value="{{ingredients}}" >
 
+<div class="field">
+<label class="label">Imagen</label>
+<input class="input" type="file" name="snack-image" value="{{imageUrl}}">
+<br>
+</div>
 
+<div class="field">
+<label class="label">Nombre</label>
+<input class="input" type="text" name="name" placeholder="nombre" value="{{name}}">
+<br>
+</div>
+
+<div class="field">
+<label class="label">Reseña</label>
+<input class="input" type="text" name="resena" placeholder="reseña" value="{{resena}}">
+<br>
+</div>
+
+<div class="field">
+<label class="label">Ingredientes
+<input class="input" type="text" name="ingredients"  value="{{ingredients}}" >
 </label>
 <br>
-<label for="">Instrucciones
-<textarea name="instructions" id="" cols="20" rows="10">{{instructions}}</textarea>
+</div>
+
+<div class="field">
+<label class="label">Instrucciones
+<textarea class="textarea" name="instructions" id="" cols="20" rows="10">{{instructions}}</textarea>
 </label>
 <br>
-<label for="">Informacion Nutricional</label>
-<input type="number" name="nutritionFacts" placeholder="info. nutricional" value="{{nutritionFacts}}">calorias
+</div>
+
+<div class="field">
+<label class="label">Informacion Nutricional</label>
+<input class="input" type="number" name="nutritionFacts" placeholder="info. nutricional" value="{{nutritionFacts}}">calorias
 <br>
-<label for="">Tiempo de preparacion</label>
-<input type="number" name="prepTime" placeholder="T. de preparacion" value="{{prepTime}}">min
+</div>
+
+<div class="field">
+<label class="label">Tiempo de preparacion</label>
+<input class="input" type="number" name="prepTime" placeholder="T. de preparacion" value="{{prepTime}}">min
 <br>
-<label for="">Tiempo de coccion</label>
-<input type="number" name="cooktime" placeholder="T. de coccion" value="{{cooktime}}">min
+</div>
+
+<div class="field">
+<label class="label">Tiempo de coccion</label>
+<input class="input" type="number" name="cooktime" placeholder="T. de coccion" value="{{cooktime}}">min
 <br>
-<label for="">Rinde para:</label>
-<input type="number" name="yiel" placeholder="porciones" value="{{yiel}}">porciones
+</div>
 
+<div class="field">
+<label class="label">Rinde para:</label>
+<input class="input" type="number" name="yiel" placeholder="porciones" value="{{yiel}}">porciones
+</div>
 
-<button type="submit">Guardar</button>
-
-
-
+<div class="snack-edit-btn ">
+<button class="button is-focused yellow is-warning" type="submit">Guardar</button>
+</div>
 
 </form>
+</div>
+
+<footer class=" footer has-background-grey-lighter">
+    {{!-- <div class="content has-text-right">
+    <p  > 
+      <img src="/images/social-media.png" width="80" height="80"><br><br>
+       <img src="/images/social-media2.png" width="80" height="80">
+    </p>
+  </div>--}}
+  
+  <div class="content has-text-centered ">
+    <p class="pt-3">
+      <strong>Power Training</strong> by Azdhy Galvan and Valentin Quiroga
+    </p>
+  </div>
+  
+</footer>
