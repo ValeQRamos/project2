@@ -1,3 +1,4 @@
+{{!-- is-fixed-top --}}
 <nav class="navbar is-dark">
   <div class="navbar-brand">
     <div class="navbar-item">
@@ -21,47 +22,39 @@
   </div>
 </nav>
 
+{{!-- ------------------------------------------------------------------------ --}}
 
+<section class="section">
+  <div class="container">
+    <div class="columns">
+      <div class="column">
+        <form action="/routines/routines/{{_id}}/edit" method="post" enctype="multipart/form-data">
+          <h1 class="is-size-2 has-text-weight-bold has-text-centered is-italic">Editar Rutina</h1>
+            <label class="label">Titulo</label>
+            <input class="input is-warning has-text-light" type="text" name="title" value="{{title}}">
 
-<h1 class="is-size-2 has-text-weight-bold has-text-centered is-italic">Editar Rutina</h1>
+            <label class="label">Dificultad</label>
+            <input class="input is-warning has-text-light" type="text" min="1" max="15" name="difficulty" value="{{difficulty}}">
 
-<form action="/routines/routines/{{_id}}/edit" method="post" enctype="multipart/form-data">
+            <label class="label">Beneficios</label>
+            <textarea class="textarea is-warning has-text-light"  name="description" cols="30" rows="5">{{description}}</textarea>
 
+          <label class="label">Imagen</label>
+          <input class="input is-warning has-text-light"  type="file" name="routine-image" value="{{imageUr}}">
 
-<div class="field">
-  <label class="label">Titulo:</label>
-  <input class="input is-warning" style="width: 33%;" type="text" name="title" value="{{title}}">
-  <br>
-</div>
-
-<div class="field">
-  <label class="label">Duracion:</label>
-  <input class="input is-warning" style="width: 33%;" type="number" min="1" max="15" name="difficulty" value="{{difficulty}}">
-  <br>
-</div>
-
-
-<div class="field">
-  <label class="label">Descripcion:</label>
-  <textarea class="textarea is-warning"  name="description" cols="30" rows="5">{{description}}</textarea>
-  <br>
-</div>
-
-
-<label class="label">Imagen:</label>
-  <input class="input is-warning" style="width: 33%;" type="file" name="routine-image" value="{{imageUr}}">
-
-<button class="button is-focused yellow is-warning" type="submit">Guardar</button>
-
-</form>
-
+          <br>
+          
+          <button class="button is-focused yellow is-warning" type="submit">Guardar</button>
+        </form>
+      </div>
+    </div>
+  </div>
+</section>
 
 <footer class=" footer has-background-grey-lighter">
-  
   <div class="content has-text-centered ">
     <p class="pt-3">
       <strong>Power Training</strong> by Azdhy Galvan and Valentin Quiroga
     </p>
   </div>
-  
 </footer>
