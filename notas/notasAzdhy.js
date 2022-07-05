@@ -14,7 +14,7 @@ TODO 1 : MODELOS
 !PREGUNTAR SI TODO LO QUE SE VA A VER SEA FUNCIONAL 
 
 
-! modelo de signup --> agregar foto al perfil.... (V)
+!modelo de signup --> agregar foto al perfil.... (V)
 !revisar que se queda en nav  (probar la nav solo en layout) (A)
 !revisar que quede en footer, CONVERTIR LOS BONOTES DE VERDAD (V)
 !revisar formato de snacks ---> lista de ingredientes y instrucciones (A)
@@ -25,6 +25,9 @@ TODO 1 : MODELOS
 !Revisar style create-routine y edit-routine(V)
 !agregar NOTA en crear snack que coda ingrdiente sea separado por una coma y para instrucciones sepaparar por numeros (A)
 
+
+?TENTATIVO MIERCOLES-VIERNES
+!conectar snacks con routines 
 
 TODO NO TAN PRIORITARIO POR AHORA
 !.- CAMBIAR LOS NOMBRES DE LOS ARCHIVOS (EJERCICIOS Y RUTINAS)
