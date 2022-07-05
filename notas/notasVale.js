@@ -74,3 +74,26 @@ http://jsfiddle.net/vtrm92u1/10/
 4. pensar en como hacer dinamica el nav
 // 5. hacer el nav statico
 */
+
+/*
+!PREGUNTAR SI TODO LO QUE SE VA A VER SEA FUNCIONAL 
+
+
+! modelo de signup --> agregar foto al perfil.... (V)
+!revisar que se queda en nav  (probar la nav solo en layout) (A)
+!revisar que quede en footer, CONVERTIR LOS BONOTES DE VERDAD (V)
+!revisar formato de snacks ---> lista de ingredientes y instrucciones (A)
+!Completar formato de exercise (A)
+!dar formato al login (V)
+!dar formato al signup(V)
+!Cambiar colores de botones rouyines/routines (V)
+!Revisar style create-routine y edit-routine(V)
+!agregar NOTA en crear snack que coda ingrdiente sea separado por una coma y para instrucciones sepaparar por numeros (A)
+
+
+TODO NO TAN PRIORITARIO POR AHORA
+!.- CAMBIAR LOS NOMBRES DE LOS ARCHIVOS (EJERCICIOS Y RUTINAS)
+!checar si se puede añadir una ventana emergente para cuando algo no esta correcto o falta algo 
+!revisar como hacer las fotos del mismo tamaño cuando son diferentes
+
+*/
