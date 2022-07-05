@@ -1,25 +1,35 @@
 {{!-- views/auth/signup.hbs --}}
 
-<div id="form">
-  <h2>Signup</h2>
-  <form action="/signup" method="POST">
+<div class="has-background-grey-lighter">
+<section class="section">
+  <div class="container">
+    <div class="columns">
+      <div class="column">
+        <form action="/signup" method="POST">
+          <h2 class="title">Signup</h2>
 
-    <label> Username
-      <input type="text" name="username" placeholder="ironhacker" />
-    </label>
+          <label class="label"> Username</label>
+          <input class="input is-warning has-text-light" type="text" name="username" placeholder="ironhacker" />
 
-    <label> Email
-      <input type="email" name="email" placeholder="rockstar@ironhack.com" />
-    </label>
+          <label class="label"> Email</label>
+          <input class="input is-warning has-text-light" type="email" name="email" placeholder="rockstar@ironhack.com" />
 
-    <label> Password
-      <input type="password" name="password" placeholder="********" />
-    </label>
+          <label class="label">Password</label>
+          <input class="input is-warning has-text-light" type="password" name="password" placeholder="********" />
 
-    <button type="submit">Create account</button>
+          <div>
+            <button class="button" type="submit">Create account</button>
+          </div>
 
-    {{#if errorMessage}}
-      <p class="error">{{errorMessage}}</p>
-    {{/if}}
-  </form>
+          {{#if errorMessage}}
+            <p class="error">{{errorMessage}}</p>
+          {{/if}}
+
+        </form>
+      </div>
+    </div>
+  </div>
+</section>
 </div>
+
+
