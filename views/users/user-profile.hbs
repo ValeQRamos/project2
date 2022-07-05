@@ -1,15 +1,81 @@
 {{#if userInSession}}
-    <h2>Bienvenido, {{ userInSession.username }}!</h2>
-    <p>Este es tu perfil</p>
-    <button>
-        <a href="/userProfile">Recargar la pagina</a>
-    </button>
+<section class="section">
+    <div class="container">
+        <h2 class="title has-text-centered">Bienvenido {{ userInSession.username }} :)</h2>
+        <button>
+            <a href="/userProfile">Recargar la pagina</a>
+        </button>
 
-    <a href="/routines/create-routine">Model ejercicios</a>
-    <a href="/snacks/create-snacks">Crear Snacks</a>
-    <a href="/snacks/snacks-list">Lista de Snacks</a>
-    <a href="/exercise/exercise-list">Lista de rutinas</a>
-    <a href="/exercise/create-exercise">Crear una rutina</a>
+        <div class="columns is-multiline">
+          <div class="column is-3">
+            <div class="card">
+              <div class="card-image">
+                <figure class="image">
+                  <img src="/images/snacks01.jpg" alt="snacks">
+                </figure>
+              </div>
+              <div class="card-content">
+                <h1 class="subtitle has-text-centered">Lista de Snacks</h1>
+                <div class="has-text-centered">
+                  <a class="button is-dark" href="/snacks/snacks-list">Lista de Snacks</a>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="column is-3">
+            <div class="card">
+              <div class="card-image">
+                <figure class="image">
+                  <img src="/images/snacks02.jpg" alt="snacks">
+                </figure>
+              </div>
+              <div class="card-content">
+                <h1 class="subtitle has-text-centered">Crear un Snack</h1>
+                <div class="has-text-centered">
+                  <a class="button is-dark" href="/snacks/create-snacks">Crear Snacks</a>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="column is-3">
+            <div class="card">
+              <div class="card-image">
+                <figure class="image">
+                  <img src="/images/ejercicio00.jpg" alt="snacks">
+                </figure>
+              </div>
+              <div class="card-content">
+                <h1 class="subtitle has-text-centered">Lista de Rutinas</h1>
+                <div class="has-text-centered">
+                  <a class="button is-dark" href="/exercise/exercise-list">Lista de rutinas</a>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="column is-3">
+            <div class="card">
+              <div class="card-image">
+                <figure class="image">
+                  <img src="/images/ejercicio01.jpg" alt="snacks">
+                </figure>
+              </div>
+              <div class="card-content">
+                <h1 class="subtitle has-text-centered">Crear una Rutina</h1>
+                <div class="has-text-centered">
+                  <a class="button is-dark" href="/exercise/create-exercise">Crear una rutina</a>
+                </div>
+              </div>
+            </div>
+          </div>
+
+
+        </div>
+
+    </div>
+</section>
 
 {{!-- Abcdef123 --}}
 {{!-- agregar los botones de nueva rutina y nuevo snack --}}

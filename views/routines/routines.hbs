@@ -1,3 +1,4 @@
+{{!-- is-fixed-top --}}
 <nav class="navbar is-dark">
   <div class="navbar-brand">
     <div class="navbar-item">
@@ -21,29 +22,21 @@
 {{!-- ------------------------------------------------------------------------ --}}
 <section class="section has-background-grey-dark">
 
-  <h1 class="is-size-1 has-text-centered mb-5">
+  <h1 class="is-size-1 has-text-centered mt-5 mb-5">
     <span class="yellow">Ejemplos de Ejercicios</span>
   </h1>
 
   <div class="container">
-
     <div class="columns is-multiline">
       {{#each routine}}
         <div class="column is-4"> 
-
           <div class="card has-background-black-ter">
 
-
-
             <div class="card-image has-text-centered p-3">
-              {{!-- ! mostrarle a azhdy como cambiar el tamaño de imagen --}}
               <figure class="">   
                 <img src="{{imageUrl}}">
               </figure>
             </div>
-
-
-
 
             <div class="card-content pt-1">
               <h1 class="is-size-3 has-text-centered has-text-weight-bold mb-3">
@@ -53,7 +46,7 @@
                 Dificultad: <span class="has-text-light">{{difficulty}}</span>
               </p>
               <p class="is-size-6 has-text-centered has-text-light">
-                <span class="is-size-5 has-text-weight-bold yellow">Descripcion: </span>{{description}}
+                <span class="is-size-5 has-text-weight-bold yellow">Beneficios </span>{{description}}
               </p>
             </div>
 
@@ -63,7 +56,6 @@
             </footer>
 
           </div>
-
         </div>
       {{/each}}
     </div>

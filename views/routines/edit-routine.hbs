@@ -1,24 +1,60 @@
-<h1>Editar Rutina</h1>
+{{!-- is-fixed-top --}}
+<nav class="navbar is-dark">
+  <div class="navbar-brand">
+    <div class="navbar-item">
+      <a href="/"><img src="/images/logo.png" alt="logo" style="max-height:60px" class="py-2 px-2"></a>
+    </div>
+    <a class="navbar-burger" id="burger">
+      <span></span>
+      <span></span>
+      <span></span>
+    </a>
+  </div>
+  <div class="navbar-menu" id="nav-links">
+    <div class="navbar-end">
+      <a href="https://www.trainingaroundtheworld.com/blog/como-encontrar-la-motivacion-para-hacer-ejercicio" class="navbar-item">
+        <span class="is-size-7 yellow">Para saber mas..</span>
+      </a>
+      <a href="/login" class="navbar-item">
+        <span class="is-size-7 yellow">Blog</span>
+      </a>
+    </div>
+  </div>
+</nav>
 
-<form action="/routines/routines/{{_id}}/edit" method="post" enctype="multipart/form-data">
+{{!-- ------------------------------------------------------------------------ --}}
 
+<section class="section">
+  <div class="container">
+    <div class="columns">
+      <div class="column">
+        <form action="/routines/routines/{{_id}}/edit" method="post" enctype="multipart/form-data">
+          <h1 class="is-size-2 has-text-weight-bold has-text-centered is-italic">Editar Rutina</h1>
+            <label class="label">Titulo</label>
+            <input class="input is-warning has-text-light" type="text" name="title" value="{{title}}">
 
-<label>Titulo:
-  <input type="text" name="title" value="{{title}}">
-</label>
-<br>
-<label>Duracion:
-  <input type="number" min="1" max="15" name="difficulty" value="{{difficulty}}">
-</label>
-<br>
-<label>Descripcion:
-  <textarea name="description" cols="30" rows="5">{{description}}</textarea>
-</label>
-<br>
-<label>Imagen:
-  <input type="file" name="routine-image" value="{{imageUr}}">
-</label>
-<br>
-<button type="submit">Guardar</button>
+            <label class="label">Dificultad</label>
+            <input class="input is-warning has-text-light" type="text" min="1" max="15" name="difficulty" value="{{difficulty}}">
 
-</form>
+            <label class="label">Beneficios</label>
+            <textarea class="textarea is-warning has-text-light"  name="description" cols="30" rows="5">{{description}}</textarea>
+
+          <label class="label">Imagen</label>
+          <input class="input is-warning has-text-light"  type="file" name="routine-image" value="{{imageUr}}">
+
+          <br>
+          
+          <button class="button is-focused yellow is-warning" type="submit">Guardar</button>
+        </form>
+      </div>
+    </div>
+  </div>
+</section>
+
+<footer class=" footer has-background-grey-lighter">
+  <div class="content has-text-centered ">
+    <p class="pt-3">
+      <strong>Power Training</strong> by Azdhy Galvan and Valentin Quiroga
+    </p>
+  </div>
+</footer>
