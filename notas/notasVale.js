@@ -18,45 +18,59 @@ TODO Por Hacer(tarea)
 
 -------------------------------------------------------------------
 TODO 1 : MODELOS
-*Azdhy -> 1. crear el archivo y modelo de las recetas recomendadas.//? ((F)models/(A)Snacks.model.js)
-*         2. crear el archivo y rutas CRUD de las recetas..........//? ((F)routes/(A)snacks.routes.js)
-*         3. crear la vista de todas las recetas...................//? ((F)views/(F)snacks/(A)snacks.hbs)
-*         4. crear la vista de formulario para crear snacks........//? ((F)views/(F)snacks/(A)new-snacks.hbs)
-*         5. crear la vista de formulario para editar snacks.......//? ((F)views/(F)snacks/(A)edit-snacks.hbs)
 
 // *Vale  -> 1. crear el archivo y modelo de los ejercicios...........//? ((F)models/(A)Routine.model.js)
 // *         2. crear el archivo y rutas CRUD de las rutinas..........//? ((F)routes/(A)routine.routes.js)
 // *         3. crear la vista de todas las rutinas...................//? ((F)vies/(F)routines/(A)routines.hbs)
 // *         4. crear la vista de formulario para crear rutinas.......//? ((F)views/(F)routines/(A)new-routine.hbs)
 // *         5. crear la vista de formulario para editar rutinas......//? ((F)views/(F)routines/(A)edit-routine.hbs)
-*            6. dar un poco de formato al index, layout  y routines/routines
+// *            6. dar un poco de formato al index, layout  y routines/routines
 --------------------------------------------------------------------
 TODO 2 : Pefil y Pruebas
-! Los botones que manden a los formularios  pueden estar dentro de un nav o solos pero solo adentro del perfil del usuario
-*Azdhy -> 1. hacer pruebas del login para ver si salen errores.....//? localhost
-*Vale  -> 1. hacer botones para crear y editar desde perfil........//? ((F)views/(F)users/(A)user-profile.hbs)
-*Vale  -> 2. cambiar a español auth routes.js
-
-*/
-
+// ! Los botones que manden a los formularios  pueden estar dentro de un nav o solos pero solo adentro del perfil del usuario
+// *Azdhy -> 1. hacer pruebas del login para ver si salen errores.....//? localhost
+// *Vale  -> 1. hacer botones para crear y editar desde perfil........//? ((F)views/(F)users/(A)user-profile.hbs)
+// *Vale  -> 2. cambiar a español auth routes.js
 
 
 /* 
-! Posibles nombres para la pagina(app);
-Quick-Fit
-
-*/
-
-
-/* 
-!
-*/
-
-
-
-/* 
-Links de gifs de ejercicios:
-
+*Links de gifs de ejercicios:
 https://giphy.com/gifs/8fit-fitness-squat-322W9dk1XC1esd8uyd
 https://giphy.com/gifs/8fit-23hPPMRgPxbNBlPQe3
+*/
+
+// * Temas por tocar con Azdhy
+/* 
+* OPCION 1
+implementar esto!
+<div class="tile is-ancestor">
+  <div class="tile is-horizontal">
+    <div class="tile is-parent">
+      <div class="tile is-child">
+        <!--Content here-->
+      </div>
+    </div>
+    <div class="tile is-parent">
+      <div class="tile is-child box">
+        <!--Content here-->
+      </div>
+    </div>
+  </div>
+</div>
+
+*OPCION 3
+http://jsfiddle.net/vtrm92u1/10/
+*/
+
+
+// ! Pendintes de Vale
+/* 
+1. darle mas formato a los ejemplos de rutinas (routines)
+
+2. snack edit ( no te lo da en la lista ) / editar recetas (boton de editar muy alto )/ fotos mas grandes (excerciste list )
+
+3. darle formato al login y signup
+
+4. pensar en como hacer dinamica el nav
+// 5. hacer el nav statico
 */

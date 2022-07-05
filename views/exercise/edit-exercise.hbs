@@ -1,7 +1,7 @@
 <nav class="navbar is-dark">
   <div class="navbar-brand">
     <div class="navbar-item">
-      <a href="/"><img src="../images/logo.png" alt="logo" style="max-height:60px" class="py-2 px-2"></a>
+      <a href="/"><img src="/images/logo.png" alt="logo" style="max-height:60px" class="py-2 px-2"></a>
     </div>
     <a class="navbar-burger" id="burger">
       <span></span>
@@ -27,29 +27,29 @@
 <form action="/exercise/exercise-edit/{{id}}" method="post" enctype="multipart/form-data">
 
 <label for="">Ilustracion</label>
-<input type="file" name="exercise-image" value="{{imageUrl}}">
+<input class="input is-warning has-text-light" type="file" name="exercise-image" value="{{imageUrl}}">
 
 <label for="">Ejercicio</label>
-<input type="text" name="exercise"  value="{{exercise}}">
+<input class="input is-warning has-text-light" type="text" name="exercise"  value="{{exercise}}">
 
 <label for="">Series</label>
-<input type="number" name="series"  value="{{series}}">
+<input class="input is-warning has-text-light" type="number" name="series"  value="{{series}}">
 
 <label for="">Repeticiones</label>
-<input type="number" name="repetitions" value="{{repetitions}}">
+<input class="input is-warning has-text-light" type="number" name="repetitions" value="{{repetitions}}">
 
 <label for="">Descanso</label>
-<input type="number" name="breaks" value="{{breaks}}">seg
+<input class="input is-warning has-text-light" type="number" name="breaks" value="{{breaks}}">seg
 
-<button type="submit">Guardar</button>
+<button class="button" type="submit">Guardar</button>
 
 </form>
 
 <footer class="footer has-background-grey-lighter pt-4 pb-4">
-   <div class="content has-text-right">
+  <div class="content has-text-right">
     <p>
       <img src="/images/social-media.png" width="80" height="80"><br><br>
-       <img src="/images/social-media2.png" width="80" height="80">
+      <img src="/images/social-media2.png" width="80" height="80">
     </p>
   </div>
   <div class="content has-text-centered ">
