@@ -84,14 +84,27 @@ router.get('/userProfile', isLoggedIn ,(req, res) => {
   res.render('users/user-profile', { userInSession: req.session.currentUser });
 });
 
-// Logout ------
+/* Logout ------
 router.post('/logout', isLoggedIn ,(req, res, next) => {
   req.session.destroy(err => {
     if (err) next(err);
     res.redirect('/');
-    //! una vista
+  });
+});*/
+ //! una vista
+
+ router.get("/logout", isLoggedIn, (req, res) => {
+  req.session.destroy((err) => {
+    if (err) {
+      return res
+        .status(500)
+        .render("auth/logout", { errorMessage: err.message });
+    }
+    res.redirect("/");
   });
 });
+
+
 
 
 

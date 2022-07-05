@@ -8,7 +8,7 @@ router.get("/exercise-list",(req,res,next)=>{
     
     ExerciseModel.find()
     .then(exercise=>{
-        res.render("exercise/exercises",{exercise})
+        res.render("exercise/menu-exercise",{exercise})
     })
 })
 

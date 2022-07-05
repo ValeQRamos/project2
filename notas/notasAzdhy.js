@@ -9,13 +9,15 @@ TODO 1 : MODELOS
 //         6. crear modelo y rutas de excercises model 
 // revisar porque al editar un snack se quita es login y hay que volver a entrar
 //posicionar el nav  ....... //?(se añade padding and margin nav)
+?EL GRAN ERROR 
 
 
 !PREGUNTAR SI TODO LO QUE SE VA A VER SEA FUNCIONAL 
 
 
-!modelo de signup --> agregar foto al perfil.... (V)
-!revisar que se queda en nav  (probar la nav solo en layout) (A)
+//modelo de signup --> agregar foto al perfil.... (V)
+//revisar que se queda en nav  (probar la nav solo en layout) (A)
+!editar foto de perfil (v)
 !revisar que quede en footer, CONVERTIR LOS BONOTES DE VERDAD (V)
 !revisar formato de snacks ---> lista de ingredientes y instrucciones (A)
 !Completar formato de exercise (A)
@@ -24,7 +26,7 @@ TODO 1 : MODELOS
 !Cambiar colores de botones rouyines/routines (V)
 !Revisar style create-routine y edit-routine(V)
 !agregar NOTA en crear snack que coda ingrdiente sea separado por una coma y para instrucciones sepaparar por numeros (A)
-
+!Ya establecer las conciones para que si se ve y que no se ve cuando el usuario se logea
 
 ?TENTATIVO MIERCOLES-VIERNES
 !conectar snacks con routines 
@@ -33,6 +35,7 @@ TODO NO TAN PRIORITARIO POR AHORA
 !.- CAMBIAR LOS NOMBRES DE LOS ARCHIVOS (EJERCICIOS Y RUTINAS)
 !checar si se puede añadir una ventana emergente para cuando algo no esta correcto o falta algo 
 !revisar como hacer las fotos del mismo tamaño cuando son diferentes
+!revisar si se podra enlistar los ejercicios dependiendo su parte del cuerpo a trabajar
 
 //revisar el tamaño de las card de lista de snacks
 

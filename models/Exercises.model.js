@@ -4,6 +4,7 @@ const {Schema, model} = mongoose
 const exerciseSchema = new Schema(
   {
     imageUrl:{
+      default:"",
       type:String
     },
     exercise:{
