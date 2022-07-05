@@ -1,34 +1,32 @@
-
-
 <h1 class="is-size-1 has-text-centered mb-5">Editar rutina</h1>
 
 
 <form action="/exercise/exercise-edit/{{id}}" method="post" enctype="multipart/form-data">
 
 <label for="">Ilustracion</label>
-<input class="input is-warning has-text-light" type="file" name="exercise-image" value="{{imageUrl}}">
+<input type="file" name="exercise-image" value="{{imageUrl}}">
 
 <label for="">Ejercicio</label>
-<input class="input is-warning has-text-light" type="text" name="exercise"  value="{{exercise}}">
+<input type="text" name="exercise"  value="{{exercise}}">
 
 <label for="">Series</label>
-<input class="input is-warning has-text-light" type="number" name="series"  value="{{series}}">
+<input type="number" name="series"  value="{{series}}">
 
 <label for="">Repeticiones</label>
-<input class="input is-warning has-text-light" type="number" name="repetitions" value="{{repetitions}}">
+<input type="number" name="repetitions" value="{{repetitions}}">
 
 <label for="">Descanso</label>
-<input class="input is-warning has-text-light" type="number" name="breaks" value="{{breaks}}">seg
+<input type="number" name="breaks" value="{{breaks}}">seg
 
-<button class="button" type="submit">Guardar</button>
+<button type="submit">Guardar</button>
 
 </form>
 
 <footer class="footer has-background-grey-lighter pt-4 pb-4">
-  <div class="content has-text-right">
+   <div class="content has-text-right">
     <p>
       <img src="/images/social-media.png" width="80" height="80"><br><br>
-      <img src="/images/social-media2.png" width="80" height="80">
+       <img src="/images/social-media2.png" width="80" height="80">
     </p>
   </div>
   <div class="content has-text-centered ">
