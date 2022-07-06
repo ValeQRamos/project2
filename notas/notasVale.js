@@ -76,18 +76,18 @@ http://jsfiddle.net/vtrm92u1/10/
 */
 
 /*
-!PREGUNTAR SI TODO LO QUE SE VA A VER SEA FUNCIONAL 
+// PREGUNTAR SI TODO LO QUE SE VA A VER SEA FUNCIONAL 
 
 
 //  modelo de signup --> agregar foto al perfil.... (V)
-!revisar que se queda en nav  (probar la nav solo en layout) (A)
-!revisar que quede en footer, CONVERTIR LOS BONOTES DE VERDAD (V)
-!revisar formato de snacks ---> lista de ingredientes y instrucciones (A)
-!Completar formato de exercise (A)
+// revisar que se queda en nav  (probar la nav solo en layout) (A)
+// revisar que quede en footer, CONVERTIR LOS BONOTES DE VERDAD (V)
+// revisar formato de snacks ---> lista de ingredientes y instrucciones (A)
+// Completar formato de exercise (A)
 // dar formato al login (V)
 // dar formato al signup(V)
-!Cambiar colores de botones rouyines/routines (V)
-!Revisar style create-routine y edit-routine(V)
+!Cambiar colores de botones rouyines/routines (A)
+!Revisar style create-routine y edit-routine(A)
 !agregar NOTA en crear snack que coda ingrdiente sea separado por una coma y para instrucciones sepaparar por numeros (A)
 
 
@@ -96,4 +96,12 @@ TODO NO TAN PRIORITARIO POR AHORA
 !checar si se puede añadir una ventana emergente para cuando algo no esta correcto o falta algo 
 !revisar como hacer las fotos del mismo tamaño cuando son diferentes
 
+*/
+
+/*
+pendientes nuevos
+arreglar tamano de signup login
+layout cambiar ejemplos a nav
+
+index.hbs -> agregar proposito o guia
 */

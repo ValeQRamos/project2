@@ -96,6 +96,12 @@ a {
 
 .table-exercise{
 padding-left: 220px;
+}
 
-
+.placeholder {
+  color: white;
+}
+.input::placeholder {
+  color: #fff;
+  opacity: 0.3;
 }
