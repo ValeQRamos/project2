@@ -14,7 +14,7 @@
       <nav class="navbar is-dark is-fixed-top">
         <div class="navbar-brand">
           <div class="navbar-item">
-            <a href="/"><img src="../images/logo.png" alt="logo" style="max-height:60px" class="py-2 px-2"></a>
+            <a href="/"><img src="/images/logo.png" alt="logo" style="max-height:60px" class="py-2 px-2"></a>
           </div>
           <a class="navbar-burger" id="burger">
             <span></span>
@@ -25,23 +25,26 @@
          {{#if userInSession}} 
         <div class="navbar-menu" id="nav-links">
           <div class="navbar-end">
-            <a href="/logout" class="navbar-item">
-              <span class="is-size-7 yellow">logout</span>
-            </a>
             <a href="/login" class="navbar-item">
               <span class="is-size-7 yellow">Blog</span>
+            </a>
+             <a href="/logout" class="navbar-item">
+              <span class="is-size-7 yellow">Logout</span>
             </a>
           </div>
 
           {{else}}
            <div class="navbar-menu" id="nav-links">
           <div class="navbar-end">
+             <a href="/signup" class="navbar-item">
+              <span class="is-size-6 yellow">Signup</span>
+            </a>
             <a href="/login" class="navbar-item">
-              <span class="is-size-7 yellow">Login</span>
+            <img src="../images/login.jpg.png"src="" alt="">
+              <span class="is-size-6 yellow"> Login</span> 
+            
             </a>
-            <a href="/signup" class="navbar-item">
-              <span class="is-size-7 yellow">Signup</span>
-            </a>
+           
           </div>
           {{/if}}
         </div>

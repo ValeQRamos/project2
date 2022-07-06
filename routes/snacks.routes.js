@@ -18,7 +18,7 @@ router.get("/snacks-list",(req,res,next)=>{
 })
 
 router.get("/create-snacks",(req,res,next)=>{
-    res.render ("snacks/new-snacks")
+    res.render ("snacks/new-snacks",{userInSession: req.session.currentUser})
 })
 
 router.post("/create-snacks",fileUploader.single("snack-image"),(req,res,next)=>{
@@ -38,7 +38,7 @@ router.get("/snacks-edit/:id",(req,res,next)=>{
 const {id} = req.params
 SnackModel.findById(id)
 .then(snack=>{
-    res.render("snacks/edit-snacks",snack)
+    res.render("snacks/edit-snacks",{snack,userInSession: req.session.currentUser})
 })
 .catch(error =>next(error))
 

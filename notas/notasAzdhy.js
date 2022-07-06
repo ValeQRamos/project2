@@ -20,13 +20,13 @@ TODO 1 : MODELOS
 !editar foto de perfil (v)
 !revisar que quede en footer, CONVERTIR LOS BONOTES DE VERDAD (V)
 !revisar formato de snacks ---> lista de ingredientes y instrucciones (A)
-!Completar formato de exercise (A)
+//Completar formato de exercise (A)
 !dar formato al login (V)
 !dar formato al signup(V)
 !Cambiar colores de botones rouyines/routines (V)
 !Revisar style create-routine y edit-routine(V)
 !agregar NOTA en crear snack que coda ingrdiente sea separado por una coma y para instrucciones sepaparar por numeros (A)
-!Ya establecer las conciones para que si se ve y que no se ve cuando el usuario se logea
+//Ya establecer las conciones para que si se ve y que no se ve cuando el usuario se logea
 
 ?TENTATIVO MIERCOLES-VIERNES
 !conectar snacks con routines 

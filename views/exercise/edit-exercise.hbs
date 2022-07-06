@@ -1,26 +1,33 @@
+{{#if userInSession}}
 <h1 class="is-size-1 has-text-centered mb-5">Editar rutina</h1>
 
+<form class="form" action="/exercise/exercise-edit/{{id}}" method="post" enctype="multipart/form-data">
 
-<form action="/exercise/exercise-edit/{{id}}" method="post" enctype="multipart/form-data">
+<label class="label">Ilustracion</label>
+<input class="input" type="file" name="exercise-image" value="{{imageUrl}}">
 
-<label for="">Ilustracion</label>
-<input type="file" name="exercise-image" value="{{imageUrl}}">
+<label class="label">Ejercicio</label>
+<input class="input" type="text" name="exercise"  value="{{exercise}}">
 
-<label for="">Ejercicio</label>
-<input type="text" name="exercise"  value="{{exercise}}">
+<label class="label">Series</label>
+<input class="input" type="number" name="series"  value="{{series}}">
 
-<label for="">Series</label>
-<input type="number" name="series"  value="{{series}}">
+<label class="label">Repeticiones</label>
+<input class="input" type="number" name="repetitions" value="{{repetitions}}">
 
-<label for="">Repeticiones</label>
-<input type="number" name="repetitions" value="{{repetitions}}">
+<label class="label">Descanso</label>
+<input class="input" type="number" name="breaks" value="{{breaks}}">seg
 
-<label for="">Descanso</label>
-<input type="number" name="breaks" value="{{breaks}}">seg
-
-<button type="submit">Guardar</button>
+<button class="button is-focused is-warning yellowBg" type="submit">Guardar</button>
 
 </form>
+
+{{else}}
+<div class="p-6 m-6 has-text-centered">
+<img src="/images/else-new-exercise.jpg" width="800" height="800">
+</div>
+
+{{/if}}
 
 <footer class="footer has-background-grey-lighter pt-4 pb-4">
    <div class="content has-text-right">

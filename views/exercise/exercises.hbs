@@ -1,12 +1,13 @@
-
-
-<h1 class="is-size-1 has-text-centered mb-5 yellow">Lista de ejercicios</h1>
+<div class="p-6 m-6 ">
+<h1 class="is-size-1 has-text-centered mb-5 yellow is-italic">Lista de ejercicios</h1>
 
 <div class="table-exercise">
 <table class="table is-striped">
 <thead>
     <tr>
+       {{#if ../userInSession}}
         <th>Opciones</th>
+        {{/if}}
         <th>Ilustracion</th>
         <th>Ejercicio</th>
         <th>Series</th>
@@ -17,11 +18,12 @@
 
 {{#each exercise}}
 <tr>
+   {{#if ../userInSession}}
     <td>
         <a href="/exercise/exercise-edit/{{id}}">Editar</a>
         <a href="/exercise/exercise-delete/{{id}}">Borrar</a>
-
     </td>
+    {{/if}}
     <td><figure><img src="{{imageUrl}}" width="400" height="400"></figure> </td>
     <td>{{exercise}}</td>
     <td>{{series}}</td>
@@ -34,7 +36,7 @@
 {{/each}}
 </table>
 </div>
-
+</div>
 
 <footer class="footer has-background-grey-lighter pt-4 pb-4">
    <div class="content has-text-right">
