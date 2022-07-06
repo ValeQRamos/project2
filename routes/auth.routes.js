@@ -80,20 +80,11 @@ router.post('/login', isLoggedOut ,(req, res, next) => {
 
 // UserProfile ------
 router.get('/userProfile', isLoggedIn ,(req, res) => {
-  console.log("que es..",req.session)
+  //? console.log("que es..",req.session)
   res.render('users/user-profile', { userInSession: req.session.currentUser });
 });
 
-/* Logout ------
-router.post('/logout', isLoggedIn ,(req, res, next) => {
-  req.session.destroy(err => {
-    if (err) next(err);
-    res.redirect('/');
-  });
-});*/
- //! una vista
-
- router.get("/logout", isLoggedIn, (req, res) => {
+router.get("/logout", isLoggedIn, (req, res) => {
   req.session.destroy((err) => {
     if (err) {
       return res
@@ -104,8 +95,27 @@ router.post('/logout', isLoggedIn ,(req, res, next) => {
   });
 });
 
+// Edit user profile picture
+router.get('/edit-user', isLoggedIn,(req, res, next) => {
+  // console.log('edit user ---->', req.session.currentUser)
+  res.render('users/edit-user', {userInSession: req.session.currentUser})
+})
 
+router.post('/edit-user', isLoggedIn, (req, res, next) => {
+  let profile_pic;
+  if(req.file){
+    profile_pic = req.file.path
+  }
+  console.log('req.file ---> ',req.file )
+  const {...allUser} = req.body
 
+  User.findByIdAndUpdate(req.session._id, {...allUser, profile_pic},{new:true})
+    .then(updatedPhoto =>{
+      req.session.user = updatedPhoto
 
+      res.redirect('userProfile')
+    })
+    .catch(error => next(error))
+})
 
 module.exports = router;
