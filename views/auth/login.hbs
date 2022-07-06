@@ -1,30 +1,77 @@
-<div class="has-background-grey-lighter">
+<div id="background-image2">
+  <br>
+  <br>
+  <br>
+  <br>
+  <br>
+
   <section class="section">
   <div class="container">
-    <div class="columns">
-      <div class="column">
+    <div class="columns is-vcentered">
+      <div class="column is-4">
 
-  <form action="/login" method="POST">
-    <h1 class="title">Login</h1>
+        <form action="/login" method="POST">
+          <h1 class="title">Iniciar Sesion</h1>
 
-    <label class="label">Email</label>
-    <input class="input is-warning has-text-light" type="email" name="email" placeholder="rockstar@ironhack.com" />
+          <label class="label mt-5">Correo</label>
+          <input class="input is-warning has-text-light" type="email" name="email" placeholder="rockstar@ironhack.com" />
 
-    <label class="label">Password</label>
-    <input class="input is-warning has-text-light" type="password" name="password" placeholder="********" />
+          <label class="label mt-5">Contraseña</label>
+          <input class="input is-warning has-text-light" type="password" name="password" placeholder="********" />
 
-    <div>
-      <button class="button" type="submit">Login</button>
-    </div>
+          <div>
+            <button class="button is-dark mt-5" type="submit">Conectarse</button>
+          </div>
 
-    {{#if errorMessage}}
-      <p class="error">{{errorMessage}}</p>
-    {{/if}}
-  </form>
+          {{#if errorMessage}}
+            <p class="error">{{errorMessage}}</p>
+          {{/if}}
+        </form>
 
       </div>
+
+      <div class="column is-8">
+        <div class="card m-2">
+          <div class="card-image">
+            <figure class="image">
+              <img src="/images/login00.jpg" alt="loginphoto">
+            </figure>
+          </div>
+          <div class="card-content has-background-dark">
+            <div class="content">
+              <h1 class="has-text-light">Conectate a tu cuenta para ver , crear y editar rutinas y recetas de snacks</h1>
+            </div>
+          </div>
+        </div>
+      </div>
+
     </div>
   </div>
 </section>
 
 </div>
+
+<footer class="footer p-3 has-background-dark">
+  <div class="content has-text-centered">
+    <p class="is-size-6 has-text-light"> 💻
+      <strong class="has-text-light">Power Training</strong> 
+      by <span class="yellow is-italic">Azdhy Galvan</span> 
+      and <span class="yellow is-italic">Vale Quiroga</span> 💻
+    </p>
+    <div>
+      <p class="has-text-light">Visita nuestras redes sociales</p>
+      <div>
+        <a class="mr-4" href="https://www.facebook.com/theironhack/">
+          <img src="/images/face.png" alt="facebook logo" width="30" height="30">
+        </a>
+        <a href="https://twitter.com/ironhack">
+          <img src="/images/twitter.png" alt="twitter logo" width="30" height="30">
+        </a>
+        <a class="ml-4" href="https://www.instagram.com/ironhack/">
+          <img src="/images/instagram.png" alt="instagram logo" width="30" height="30">
+        </a>
+
+      </div>
+    </div>
+  </div>
+</footer>

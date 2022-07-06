@@ -1,10 +1,20 @@
+<br>
+<br>
+<br>
+<br>
+
+
 {{#if userInSession}}
-<section class="section">
+<section class="section has-background-white-ter">
     <div class="container">
-        <h2 class="title has-text-centered">Bienvenido {{ userInSession.username }} :)</h2>
-        <button>
-            <a href="/userProfile">Recargar la pagina</a>
-        </button>
+        <div class="has-text-centered">
+          <img src="{{userInSession.profile_pic}}" width="100" height="100" alt="" srcset="">
+          <h2 class="title has-text-centered mb-0">
+            Hola <span class="yellow">{{userInSession.username}}</span> :)
+          </h2>
+          <p class="subtitle mt-1">Bienvenido a tu perfil</p>
+          <a class="button is-small is-danger mb-5" href="/edit-user">Editar foto</a>
+        </div>
 
         <div class="columns is-multiline">
           <div class="column is-3">
@@ -71,23 +81,35 @@
             </div>
           </div>
 
-
         </div>
 
     </div>
 </section>
 
-{{!-- ? --------- --}}
-<div class="container">
-username : {{ userInSession.username }}
-<br>
-email: {{userInSession.email}}
-<br>
-<img src="{{userInSession.profile_pic}}" width="100" height="100" alt="" srcset="">
+<footer class="footer p-3 has-background-dark">
+  <div class="content has-text-centered">
+    <p class="is-size-6 has-text-light"> 💻
+      <strong class="has-text-light">Power Training</strong> 
+      by <span class="yellow is-italic">Azdhy Galvan</span> 
+      and <span class="yellow is-italic">Vale Quiroga</span> 💻
+    </p>
+    <div>
+      <p class="has-text-light">Visita nuestras redes sociales</p>
+      <div>
+        <a class="mr-4" href="https://www.facebook.com/theironhack/">
+          <img src="/images/face.png" alt="facebook logo" width="30" height="30">
+        </a>
+        <a href="https://twitter.com/ironhack">
+          <img src="/images/twitter.png" alt="twitter logo" width="30" height="30">
+        </a>
+        <a class="ml-4" href="https://www.instagram.com/ironhack/">
+          <img src="/images/instagram.png" alt="instagram logo" width="30" height="30">
+        </a>
 
-</div>
-{{!-- ? ---------- --}}
-
+      </div>
+    </div>
+  </div>
+</footer>
 {{!-- Abcdef123 --}}
 {{!-- agregar los botones de nueva rutina y nuevo snack --}}
 {{else}}
