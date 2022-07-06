@@ -5,7 +5,7 @@ const fileUploader = require('../config/cloudinary.config');
 
 //create ------
 router.get('/create-routine',(req,res, next) =>{
-  res.render('routines/new-routine')
+  res.render('routines/new-routine',{userInSession: req.session.currentUser})
 })
 //create ------
 router.post('/create-routine',fileUploader.single('routine-image'),(req,res, next) => {
@@ -18,7 +18,7 @@ router.post('/create-routine',fileUploader.single('routine-image'),(req,res, nex
 //read ------
 router.get('/routines',(req, res, next) =>{
   Example.find()
-    .then(routine => res.render('routines/routines',{routine}))
+    .then(routine => res.render('routines/routines',{routine,userInSession: req.session.currentUser}))
 })
 
 //update ------
@@ -26,7 +26,7 @@ router.get('/routines/:id/edit',(req, res, next) =>{
   const {id} = req.params
 
   Example.findById(id)
-    .then(routineToEdit => res.render('routines/edit-routine.hbs',routineToEdit))
+    .then(routineToEdit => res.render('routines/edit-routine.hbs',{routineToEdit,userInSession: req.session.currentUser}))
     .catch(error => next(error))
 })
 //update ------

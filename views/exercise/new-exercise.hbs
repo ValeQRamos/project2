@@ -1,10 +1,11 @@
+{{#if userInSession}}
 
-<h1 class="is-size-1 has-text-centered mb-5 yellow">Nueva rutina</h1>
+<h1 class="is-size-1 has-text-centered mb-5 yellow pt-6 mt-6">Nueva rutina</h1>
 
 
 <form class="form" action="/exercise/create-exercise" method="post" enctype="multipart/form-data">
 
-<div class="create-exercise">
+<div class="create-exercise ">
 
 <label class="label">Ilustracion</label>
 <input class="input is-warning has-text-light" type="file" name="exercise-image">
@@ -24,6 +25,13 @@
 <button class="button" type="submit">Guardar</button>
 </div>
 </form>
+
+{{else}}
+<div class="p-6 m-6 has-text-centered">
+<img src="/images/else-new-exercise.jpg" width="800" height="800">
+</div>
+{{/if}}
+
 
 <footer class="footer has-background-grey-lighter pt-4 pb-4">
   <div class="content has-text-right">

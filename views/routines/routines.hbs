@@ -1,28 +1,7 @@
-{{!-- is-fixed-top --}}
-<nav class="navbar is-dark">
-  <div class="navbar-brand">
-    <div class="navbar-item">
-      <img src="/images/logo.png" alt="logo" style="max-height:60px" class="py-2 px-2">
-    </div>
-    <a class="navbar-burger" id="burger">
-      <span></span>
-      <span></span>
-      <span></span>
-    </a>
-  </div>
 
-  <div class="navbar-menu" id="nav-links">
-    <div class="navbar-end">
-      <a href="/" class="navbar-item">
-        <span class="is-size-5 yellow pr-5 pl-5">Inicio</span>
-      </a>
-    </div>
-  </div>
-</nav>
-{{!-- ------------------------------------------------------------------------ --}}
-<section class="section has-background-grey-dark">
+<section class="section has-background-grey-dark " >
 
-  <h1 class="is-size-1 has-text-centered mt-5 mb-5">
+  <h1 class="is-size-1 has-text-centered mt-5 mb-5 pt-4">
     <span class="yellow">Ejemplos de Ejercicios</span>
   </h1>
 
@@ -49,12 +28,12 @@
                 <span class="is-size-5 has-text-weight-bold yellow">Beneficios </span>{{description}}
               </p>
             </div>
-
+            {{#if ../userInSession}}
             <footer class="card-footer has-background-black-ter">
                 <a class="button is-small is-success m-2 mr-3" href="routines/{{_id}}/edit">Edit</a>
                 <a class="button is-small is-danger m-2" href="routines/{{_id}}/delete">Delete</a>
             </footer>
-
+            {{/if}}
           </div>
         </div>
       {{/each}}

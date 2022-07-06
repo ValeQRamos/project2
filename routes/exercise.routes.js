@@ -8,12 +8,12 @@ router.get("/exercise-list",(req,res,next)=>{
     
     ExerciseModel.find()
     .then(exercise=>{
-        res.render("exercise/menu-exercise",{exercise})
+        res.render("exercise/exercises",{exercise,userInSession: req.session.currentUser})
     })
 })
 
 router.get("/create-exercise",(req,res,next)=>{
-    res.render("exercise/new-exercise")
+    res.render("exercise/new-exercise",{userInSession: req.session.currentUser})
 })
 
 router.post("/create-exercise",fileUploader.single("exercise-image"),(req,res,next)=>{
@@ -33,7 +33,7 @@ router.get("/exercise-edit/:id",(req,res,next)=>{
 
     ExerciseModel.findById(id)
     .then(exercise=>{
-        res.render("exercise/edit-exercise",exercise)
+        res.render("exercise/edit-exercise",{exercise,userInSession: req.session.currentUser})
     })
     .catch(error =>next(error))
 })
