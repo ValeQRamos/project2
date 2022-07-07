@@ -4,6 +4,7 @@ const bcryptjs = require('bcryptjs');
 const saltRounds = 10;
 const User = require('../models/User.model')
 const { isLoggedIn, isLoggedOut } = require('../middleware/route-guard.js');
+const uploade = require ("../config/cloudinary.config") 
 
 // Signup ------
 router.get('/signup', isLoggedOut ,(req, res) => res.render('auth/signup'));
@@ -94,24 +95,25 @@ router.get("/logout", isLoggedIn, (req, res) => {
     res.redirect("/");
   });
 });
-
+//sale indefinido en el post 
+//pero en el get si manda la foto 
 // Edit user profile picture
 router.get('/edit-user', isLoggedIn,(req, res, next) => {
   // console.log('edit user ---->', req.session.currentUser)
   res.render('users/edit-user', {userInSession: req.session.currentUser})
 })
 
-router.post('/edit-user', isLoggedIn, (req, res, next) => {
-  let profile_pic;
+router.post('/edit-user', isLoggedIn,uploade.single('profile_pic'), (req, res, next) => {
+ 
+  const {profile_pic,...allUser} = req.body
   if(req.file){
     profile_pic = req.file.path
   }
-  console.log('req.file ---> ',req.file )
-  const {...allUser} = req.body
+  User.findByIdAndUpdate(req.session.currentUser._id, {...allUser, profile_pic},{new:true})
 
-  User.findByIdAndUpdate(req.session._id, {...allUser, profile_pic},{new:true})
     .then(updatedPhoto =>{
-      req.session.user = updatedPhoto
+      //console.log("que es ",updatedPhoto)
+      req.session.currentUser = updatedPhoto
 
       res.redirect('userProfile')
     })

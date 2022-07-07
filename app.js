@@ -39,6 +39,9 @@ app.use('/routines',routineRouter)
 const exerciseRouter= require("./routes/exercise.routes")
 app.use("/exercise",exerciseRouter)
 
+const blogRouter = require("./routes/blog.routes")
+app.use("/blog",blogRouter)
+
 // ❗ To handle errors. Routes that don't exist or errors that you handle in specific routes
 require("./error-handling")(app);
 
