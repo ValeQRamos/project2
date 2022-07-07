@@ -33,7 +33,7 @@ router.get("/exercise-edit/:id",(req,res,next)=>{
 
     ExerciseModel.findById(id)
     .then(exercise=>{
-        res.render("exercise/edit-exercise",{exercise,userInSession: req.session.currentUser})
+        res.render("exercise/edit-exercise",exercise)
     })
     .catch(error =>next(error))
 })

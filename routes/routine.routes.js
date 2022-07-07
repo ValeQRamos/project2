@@ -26,7 +26,7 @@ router.get('/routines/:id/edit',(req, res, next) =>{
   const {id} = req.params
 
   Example.findById(id)
-    .then(routineToEdit => res.render('routines/edit-routine.hbs',{routineToEdit,userInSession: req.session.currentUser}))
+    .then(routineToEdit => res.render('routines/edit-routine.hbs',routineToEdit))
     .catch(error => next(error))
 })
 //update ------

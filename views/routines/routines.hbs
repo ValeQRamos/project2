@@ -1,9 +1,9 @@
 
 <section class="section has-background-grey-dark " >
 
-  <h1 class="is-size-1 has-text-centered mt-5 mb-5 pt-4">
-    <span class="yellow">Ejemplos de Ejercicios</span>
-  </h1>
+<div class="pt-6">
+ <div class="has-text-centered"><img src="/images/ejercicios-guiados.png" width="400" height="300"></div>
+</div>
 
   <div class="container">
     <div class="columns is-multiline">
@@ -30,8 +30,8 @@
             </div>
             {{#if ../userInSession}}
             <footer class="card-footer has-background-black-ter">
-                <a class="button is-small is-success m-2 mr-3" href="routines/{{_id}}/edit">Edit</a>
-                <a class="button is-small is-danger m-2" href="routines/{{_id}}/delete">Delete</a>
+                <a class="button is-small is-focused is-warning yellowBg m-2 mr-3" href="routines/{{_id}}/edit">Edit</a>
+                <a class="button is-small is-focused is-info is-light  m-2" href="routines/{{_id}}/delete">Delete</a>
             </footer>
             {{/if}}
           </div>
