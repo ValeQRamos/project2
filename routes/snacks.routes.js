@@ -24,8 +24,10 @@ router.get("/create-snacks",(req,res,next)=>{
 router.post("/create-snacks",fileUploader.single("snack-image"),(req,res,next)=>{
 
     const {name,resena,ingredients,instructions,nutritionFacts,prepTime,cooktime,yiel} = req.body
-    
-    SnackModel.create({name,resena,ingredients,instructions,nutritionFacts,prepTime,cooktime,yiel,imageUrl:req.file.path})
+    let newIngredientes = ingredients.split(",")
+    let newInstructions = instructions.split(".")
+
+    SnackModel.create({name,resena,ingredients:newIngredientes,instructions:newInstructions,nutritionFacts,prepTime,cooktime,yiel,imageUrl:req.file.path})
     .then(()=>res.redirect("snacks-list"))
     .catch(error=>{
         next (error)
