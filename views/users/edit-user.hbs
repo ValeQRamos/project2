@@ -1,16 +1,29 @@
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-
+<div class="pt-6 mt-6 ">
+<div class="has-text-centered">
 <h1 class="title">Hola {{userInSession.username}}</h1>
-<img src="{{userInSession.profile_pic}}" width="100" height="100" alt="" srcset="">
+<img src="{{userInSession.profile_pic}}" width="400" height="500" alt="" srcset="">
+</div>
+
+
 <form action="/edit-user" method="post" enctype="multipart/form-data">
 
-    <label for="">Cambiar foto de perfil</label>
-    <input type="file" name="profile_pic">
+<div class="edit-profile p-3">
 
-    <button type="submit">Enviar</button>
+    <div>
+    <label class="label">Cambiar foto de perfil</label>
+    <input  class="input" type="file" name="profile_pic">
+        </div>
+
+    <div>
+    <label for="label">Cambiar nombre de usuario</label>
+    <input class="input " type="text" name="username" value="{{userInSession.username}}">
+    </div>
+
+    <div class="p-3 has-text-centered">
+    <button class="button is-focused is-warning yellowBg " type="submit">Enviar</button>
+    </div>
+
+</div>
 </form>
+
+</div>

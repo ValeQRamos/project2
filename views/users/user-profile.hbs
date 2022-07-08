@@ -6,12 +6,13 @@
 <section class="section has-background-white-ter">
     <div class="container">
         <div class="has-text-centered">
-          <img src="{{userInSession.profile_pic}}" width="100" height="100" alt="" srcset="">
+          <img class="img-profile-pic" src="{{userInSession.profile_pic}}" width="300" height="300" alt="" srcset="">
           <h2 class="title has-text-centered mb-0">
             Hola <span class="yellow">{{userInSession.username}}</span> :)
           </h2>
-          <p class="subtitle mt-1">Bienvenido a tu perfil</p>
-          <a class="button is-small is-danger mb-5" href="/edit-user">Editar foto</a>
+          
+          <p class="subtitle mt-1 pb-6">Bienvenido a tu perfil</p>
+         {{!-- <a class="button is-small is-danger mb-5" href="/edit-user">Editar foto</a>--}}
         </div>
 
         <div class="columns is-multiline">
@@ -74,6 +75,38 @@
                 <h1 class="subtitle has-text-centered">Crear una Rutina</h1>
                 <div class="has-text-centered">
                   <a class="button is-dark" href="/exercise/create-exercise">Crear una rutina</a>
+                </div>
+              </div>
+            </div>
+          </div>
+
+           <div class="column is-3">
+            <div class="card">
+              <div class="card-image">
+                <figure class="image">
+                  <img src="/images/ejercicio00.jpg" alt="snacks">
+                </figure>
+              </div>
+              <div class="card-content">
+                <h1 class="subtitle has-text-centered">Lista de Ejercicios Guiados</h1>
+                <div class="has-text-centered">
+                  <a class="button is-dark" href="/routines/routines">Lista de ejercios Guiados</a>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="column is-3">
+            <div class="card">
+              <div class="card-image">
+                <figure class="image">
+                  <img src="/images/ejercicio00.jpg" alt="snacks">
+                </figure>
+              </div>
+              <div class="card-content">
+                <h1 class="subtitle has-text-centered">Crear un ejercicios guiados</h1>
+                <div class="has-text-centered">
+                  <a class="button is-dark" href="/routines/create-routine">Crear un ejercicios guiados</a>
                 </div>
               </div>
             </div>

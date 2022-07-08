@@ -1,27 +1,35 @@
 {{#if userInSession}}
-<section class="section">
+<section class="section pt-6 mt-6">
   <div class="container">
     <div class="columns">
       <div class="column">
           <form action="/routines/create-routine" method="post" enctype="multipart/form-data">
-            <h1 class="is-size-2 has-text-weight-bold has-text-centered is-italic">Crea una nueva rutina</h1>
+           <div class="has-text-centered">
+            <img src="/images/nuevo-ejercicio.png" width="400" height="300">
+
+           </div>
             <label class="label" >Titulo</label>
-            <input class="input is-warning has-text-light" type="text" name="title" placeholder="titulo de la rutina">
-
+            <input class="input is-warning has-text-light" type="text" name="title" placeholder="Titulo de la rutina">
+            <br>
             <label class="label">Dificultad</label>
-            <input class="input is-warning has-text-light" type="text" name="difficulty">
-
+            <input class="input is-warning has-text-light" type="text" name="difficulty" placeholder="Grado de dificultad">
+            <br>
             <label class="label">Beneficios</label>
-            <textarea class="textarea is-warning has-text-light" name="description" cols="30" rows="5"></textarea>
-
+            <textarea class="textarea is-warning has-text-light" name="description" cols="30" rows="5" placeholder="Beneficios"></textarea>
+            <br>
             <label class="label">Imagen</label>
             <input class="input is-warning has-text-light" type="file" name="routine-image">
 
             <br>
 
+            <div class="has-text-centered pt-4">
             <button class="button is-focused yellow is-warning" type="submit">Guardar</button>
+            </div>
           </form>
       </div>
+      <div>
+      <img src="/images/nuevo-ejercicio.jpg" width="500" height="500">
+    </div>
     </div>
   </div>
 </section>
