@@ -1,10 +1,13 @@
 
+<div class="pt-6">
 <section class="section">
   <div class="container">
     <div class="columns">
       <div class="column">
         <form action="/routines/routines/{{_id}}/edit" method="post" enctype="multipart/form-data">
-          <h1 class="is-size-2 has-text-weight-bold has-text-centered is-italic">Editar Rutina</h1>
+          <div>
+            <img src="/images/editar-ejercicio.png" width="400" height="300">
+          </div>
             <label class="label">Titulo</label>
             <input class="input is-warning has-text-light" type="text" name="title" value="{{title}}">
 
@@ -22,8 +25,11 @@
           <button class="button is-focused yellow is-warning" type="submit">Guardar</button>
         </form>
       </div>
+      <div class="pt-4">
+      <img src="/images/editar-ejercicio.gif" width="500" height="600">
+    </div>
     </div>
   </div>
 </section>
-
+</div>
 

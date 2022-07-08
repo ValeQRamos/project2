@@ -81,8 +81,9 @@ a {
 }
 
 .img-snack{
-  width: 300px;
-  height: 300px;
+  width: 320px;
+  height: 200px;
+  border-radius: 10px;
 }
 
 
@@ -94,10 +95,12 @@ a {
 
 .input{
   background-color: #363636;
+  color: #fff;
 }
 
 .textarea{
   background-color: #363636;
+  color: white;
 }
 
 .table-exercise{
@@ -108,6 +111,10 @@ padding-left: 120px;
   color: white;
 }
 .input::placeholder {
+  color: #fff;
+  opacity: 0.3;
+}
+.textarea::placeholder {
   color: #fff;
   opacity: 0.3;
 }
@@ -131,7 +138,36 @@ padding-bottom: 100px;
   -webkit-transform: rotate(360deg);
   filter: opacity(.5);
   }
-/* ?--------------------------- */
+
+
+  .fondo-new-comment{
+    background-image: url("/images/fondo-blog.jpg");
+    background-size: cover;
+    background-repeat: no-repeat;
+    
+  }
+
+  .img-profile-pic{
+    border-radius: 10px;
+  }
+
+  .img-exercise{
+width: 300px;
+height: 200px;
+border-radius: 10px;
+  }
+
+  .img-profile-layout{
+
+    border-radius: 100px;
+  }
+
+  .edit-profile{
+    width: 600px;
+    height: 200px;
+    
+  }
+
 .carousel-wrapper {
   height: 400px;
   position: relative;
@@ -202,3 +238,4 @@ padding-bottom: 100px;
   z-index: 3;
   opacity: 1;
 } 
+

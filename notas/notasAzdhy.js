@@ -23,13 +23,13 @@ TODO 1 : MODELOS
 //Ya establecer las conciones para que si se ve y que no se ve cuando el usuario se logea
 //Cambiar colores de botones rouyines/routines (A)
 //Revisar style create-routine y edit-routine(A)
-!revisar formato de snacks ---> lista de ingredientes y instrucciones (A)
-!agregar NOTA en crear snack que coda ingrdiente sea separado por una coma y para instrucciones sepaparar por numeros (A)
+//revisar formato de snacks ---> lista de ingredientes y instrucciones (A)
+//agregar NOTA en crear snack que coda ingrdiente sea separado por una coma y para instrucciones sepaparar por numeros (A)
 
 ?PENDIENTES NUEVOS
-!en la nav agregar ejercicios(V)
+//en la nav agregar ejercicios(V)
 !detallar index
-
+!
 
 ?TENTATIVO MIERCOLES-VIERNES
 !conectar snacks con routines 
