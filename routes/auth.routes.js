@@ -105,9 +105,9 @@ router.get('/edit-user', isLoggedIn,(req, res, next) => {
 
 router.post('/edit-user', isLoggedIn,uploade.single('profile_pic'), (req, res, next) => {
  
-  const {profile_pic,...allUser} = req.body
+  let {profile_pic,...allUser} = req.body
   if(req.file){
-    profile_pic = req.file.path
+    profile_pic = req.file.path;
   }
   User.findByIdAndUpdate(req.session.currentUser._id, {...allUser, profile_pic},{new:true})
 

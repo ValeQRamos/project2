@@ -29,7 +29,7 @@ TODO 1 : MODELOS
 ?PENDIENTES NUEVOS
 //en la nav agregar ejercicios(V)
 !detallar index
-!
+
 
 ?TENTATIVO MIERCOLES-VIERNES
 !conectar snacks con routines 
@@ -41,7 +41,9 @@ TODO NO TAN PRIORITARIO POR AHORA
 !revisar si se podra enlistar los ejercicios dependiendo su parte del cuerpo a trabajar
 
 //revisar el tamaño de las card de lista de snacks
-
+** emojis
+****https://www.saberespractico.com/web/emoticonos-en-html/
+https://multitod.com/iconos-para-paginas-web-codigo-php.php
 ***https://www.enriquejros.com/efectos-imagenes-css/
 ***link ejercicios https://www.segurosfielseg.com/boletines/5-rutinas-de-ejercicios-para-hacer-en-casa/
 
