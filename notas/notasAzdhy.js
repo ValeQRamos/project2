@@ -25,21 +25,28 @@ TODO 1 : MODELOS
 //Revisar style create-routine y edit-routine(A)
 //revisar formato de snacks ---> lista de ingredientes y instrucciones (A)
 //agregar NOTA en crear snack que coda ingrdiente sea separado por una coma y para instrucciones sepaparar por numeros (A)
-
-?PENDIENTES NUEVOS
+//revisar como hacer las fotos del mismo tamaño cuando son diferentes
 //en la nav agregar ejercicios(V)
-!detallar index
+
+?CLASE PROFES
+!conectar snacks con routines (V-A)
+!PREGUNTAR SI SE PUEDE EDITAR LO DEL USUARIO QUE CREA Y EL PUEDA SOLO EDITAR LO SUYO
+?PENDIENTES NUEVOS
+!detallar index (A)
+!checar si se puede añadir una ventana emergente para cuando algo no esta correcto o falta algo (V)
+!EDITAR LA VIEW DE NUEVA RUTINA (A)
+!LLENAR LA INFORMACION DE EJERCICIOS GUIADOS (V)
+!LLENAR LA INFORMACION DE SNACKS (A)
+!LLENAR LA INFORMACION DE RUTINAS (A)
+!MODELO DE EJEMPLOS CAMBIAR A ENUM LA DIFICULTAD (V)
+!
 
 
-?TENTATIVO MIERCOLES-VIERNES
-!conectar snacks con routines 
 
-TODO NO TAN PRIORITARIO POR AHORA
-!.- CAMBIAR LOS NOMBRES DE LOS ARCHIVOS (EJERCICIOS Y RUTINAS)
-!checar si se puede añadir una ventana emergente para cuando algo no esta correcto o falta algo 
-!revisar como hacer las fotos del mismo tamaño cuando son diferentes
 !revisar si se podra enlistar los ejercicios dependiendo su parte del cuerpo a trabajar
 
+Todo NO TAN IMPORTANTE 
+!.- CAMBIAR LOS NOMBRES DE LOS ARCHIVOS (EJERCICIOS Y RUTINAS)
 //revisar el tamaño de las card de lista de snacks
 ** emojis
 ****https://www.saberespractico.com/web/emoticonos-en-html/
