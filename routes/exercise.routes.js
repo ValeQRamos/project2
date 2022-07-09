@@ -1,9 +1,9 @@
-const router = require("express").Router()
-const ExerciseModel= require("../models/Exercises.model")
+
 const fileUploader = require ("../config/cloudinary.config")
-const Snacks = require('../models/Snacks.model')
+const router = require("express").Router()
 
-
+const Snacks = require('../models/Snacks.model') 
+const ExerciseModel= require("../models/Exercises.model")
 // create
 router.get("/create-exercise",(req,res,next)=>{
     // res.render("exercise/new-exercise",{userInSession: req.session.currentUser})
@@ -19,21 +19,21 @@ const {exercise,series,repetitions,breaks,snacks}= req.body
 ExerciseModel.create({exercise,series,repetitions,breaks,snacks,imageUrl:req.file.path})
 .then(()=> res.redirect("exercise-list"))
 .catch(error=>next (error))
-
+console.log(req.body.snacks)
 })
 
 // read
 router.get("/exercise-list",(req,res,next)=>{
     
     ExerciseModel.find()
-    // .populate('snacks')
+    .populate({path: 'snacks', model:Snacks})
     .then(exercise=>{
         res.render("exercise/exercises",{exercise,userInSession: req.session.currentUser})
     })
     .catch(error => next(error))
 })
 
-
+//? event loop
 // update
 router.get("/exercise-edit/:id",(req,res,next)=>{
     const {id} = req.params

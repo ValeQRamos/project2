@@ -30,7 +30,9 @@
     <td>{{series}}</td>
     <td>{{repetitions}}</td>
     <td>{{breaks}}seg</td>
-    <td>{{snacks}}</td>
+    {{#each snacks}}
+        <td>{{this.name}}</td>
+    {{/each}}
 
 
 

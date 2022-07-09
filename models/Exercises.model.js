@@ -23,7 +23,7 @@ const exerciseSchema = new Schema(
         require:true,
         type:Number
     },
-    snacks:[{type:Schema.Types.ObjectId, ref:'Snacks'}]
+    snacks:[{type:Schema.Types.ObjectId, ref:'snacks'}]
   },{timestamps:true}
 )
 
