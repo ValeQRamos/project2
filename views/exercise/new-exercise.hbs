@@ -22,6 +22,15 @@
 <label class="label">Descanso</label>
 <input class="input is-warning has-text-light" type="number" name="breaks"  placeholder="seg"  min="0" max="60">
 
+<label class="label">Snack Recomendado</label>
+<div>
+  <select name="snacks" class="input">
+    {{#each snackInfo}}
+      <option value="{{_id}}"> {{name}} </option>
+    {{/each}}
+  </select>
+</div>
+
 <button class="button" type="submit">Guardar</button>
 </div>
 </form>
