@@ -1,14 +1,80 @@
 
 <div class="pt-6 mt-6 fondo-new-comment">
-<h1>Nuestro Blog </h1>
+
+<div class="has-text-centered">
+    <img src="/images/blog-power.png" width="400" height="300">
+</div>
+
+{{#if userInSession}}
 
 <div class="p-6">
-{{#each comments}}
-<label>Comentarios</label>
-<p>{{comment}}</p>
+  {{#each comments}}
+<div class="card">
+  <header class="card-header">
+    <p class="card-header-title">
+     {{../userInSession.username}}  &#128512; &#128170;
+    </p>
+    <button class="card-header-icon" aria-label="more options">
+      <span class="icon">
+        <i class="fas fa-angle-down" aria-hidden="true"></i>
+      </span>
+    </button>
+  </header>
+  
+  <div class="card-content">
+    <div class="content">
+        {{comment}}
+      <br>
+      <br>
+      <time datetime="2022-08-07"> Julio 2022</time>
+    </div>
+  </div>
+  <footer class="card-footer">
+    <div class="has-text-right yellow">
+    <a href="/blog/delete-comment/{{id}}" class="card-footer-item has-text-primary ">Delete</a>
+    </div>
+  </footer>
+</div>
+<br>
+
 
 {{/each}}
 
-<button><a href="/blog/create-comment">Dejanos tu comentario</a></button>
+<div class="has-text-centered">
+<button class="button is-focused is-warning yellowBg "><a class="has-text-black " href="/blog/create-comment">Dejanos tu comentario</a></button>
 </div>
 </div>
+</div>
+
+{{else}}
+<div class="p-6">
+{{#each comments}}
+
+<div class="card">
+  <header class="card-header">
+    <p class="card-header-title">
+      Miembro de Power Training  &#128512; &#128170;
+    </p>
+    <button class="card-header-icon" aria-label="more options">
+      <span class="icon">
+        <i class="fas fa-angle-down" aria-hidden="true"></i>
+      </span>
+    </button>
+  </header>
+  <div class="card-content">
+    <div class="content">
+        {{comment}}
+      <br>
+      <br>
+      <time datetime="2022-08-07"> Julio 2022</time>
+    </div>
+  </div>
+  </div>
+<br>
+<br>
+
+{{/each}}
+<br>
+<br>
+
+{{/if}}

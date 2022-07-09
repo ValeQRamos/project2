@@ -4,7 +4,7 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta http-equiv="X-UA-Compatible" content="ie=edge" />
-    <title>{{appTitle}}</title>
+    <title>{{appTitle}}&#128170;</title>
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.4/css/bulma.min.css">
     <link rel="stylesheet" href="/stylesheets/style.css" />
   </head>
@@ -33,7 +33,7 @@
 
         <div class="navbar-dropdown">
           <a href="/blog/blog-list" class="navbar-item">
-            Blog
+            Blog &#128172;
           </a>
         </div>
         </div>
@@ -45,7 +45,7 @@
             </a>
             <div class="navbar-dropdown">
             <a href="/edit-user" class="navbar-item">
-             Editar perfil
+             Editar perfil &#128100;
             </a>
              </div>
             </div>
@@ -58,11 +58,24 @@
           {{else}}
            <div class="navbar-menu" id="nav-links">
           <div class="navbar-end">
+
+            <div class="navbar-item has-dropdown is-hoverable yellow">
+             <a class="navbar-link is-size-6 ">
+              <span class="yellow"> Conoce más &#128526; </span>
+             </a>
+
+            <div class="navbar-dropdown">
+              <a href="/blog/blog-list" class="navbar-item">
+               <span class="is-size-6 ">Blog &#128172;</span>
+              </a>
             <a href="/routines/routines" class="navbar-item">
-              <span class="is-size-6 yellow">Conoce los Ejercicios</span>
+              <span class="is-size-6 ">Conoce los Ejercicios &#129336;</span>
             </a>
+            </div>
+            </div>
+
              <a href="/signup" class="navbar-item">
-              <span class="is-size-6 yellow">Signup</span>
+              <span class="is-size-6 yellow">Signup &#128276;</span>
             </a>
             <a href="/login" class="navbar-item">
             <img src="../images/login.jpg.png"src="" alt="">
