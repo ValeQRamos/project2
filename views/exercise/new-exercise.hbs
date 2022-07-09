@@ -1,11 +1,14 @@
+
 {{#if userInSession}}
 
-<h1 class="is-size-1 has-text-centered mb-5 yellow pt-6 mt-6">Nueva rutina</h1>
-
-
+<div class="">
 <form class="form" action="/exercise/create-exercise" method="post" enctype="multipart/form-data">
 
-<div class="create-exercise ">
+<div class="has-text-centered pt-4 mt-6 ">
+  <img src="/images/nueva-rutina.png" width="400" height="300">
+</div>
+
+<div class="create-exercise p-2 ">
 
 <label class="label">Ilustracion</label>
 <input class="input is-warning has-text-light" type="file" name="exercise-image">
@@ -31,9 +34,16 @@
   </select>
 </div>
 
-<button class="button" type="submit">Guardar</button>
+<div class="has-text-centered p-4">
+<button class="button is-focused is-warning yellowBg" type="submit">Guardar</button>
+</div>
+
 </div>
 </form>
+
+<div>
+  <img src="/images/create-exercise.gif" alt="">
+</div>
 
 {{else}}
 <div class="p-6 m-6 has-text-centered">
@@ -41,4 +51,4 @@
 </div>
 {{/if}}
 
-
+</div>

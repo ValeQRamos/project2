@@ -167,7 +167,7 @@ border-radius: 10px;
     height: 200px;
     
   }
-
+/* AQUI SE PUEDE MODIFICAR EL TAMAÑO DE LAS IMAGENES EN EL CARRUSEL*/
 .carousel-wrapper {
   height: 400px;
   position: relative;
