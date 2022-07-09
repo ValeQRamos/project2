@@ -22,9 +22,8 @@ const exerciseSchema = new Schema(
     breaks:{
         require:true,
         type:Number
-
-
-    }
+    },
+    snacks:[{type:Schema.Types.ObjectId, ref:'Snacks'}]
   },{timestamps:true}
 )
 
