@@ -12,7 +12,12 @@
             <input class="input is-warning has-text-light" type="text" name="title" value="{{title}}">
 
             <label class="label">Dificultad</label>
-            <input class="input is-warning has-text-light" type="text" min="1" max="15" name="difficulty" value="{{difficulty}}">
+            {{!-- <input class="input is-warning has-text-light" type="text" min="1" max="15" name="difficulty" value="{{difficulty}}"> --}}
+              <select class="input" name="difficulty" value="{{difficulty}}">
+                <option>Facil</option>
+                <option>Media</option>
+                <option>Dificil</option>
+              </select>
 
             <label class="label">Beneficios</label>
             <textarea class="textarea is-warning has-text-light"  name="description" cols="30" rows="5">{{description}}</textarea>
