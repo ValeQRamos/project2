@@ -1,7 +1,7 @@
 
 {{#if userInSession}}
 
-<div class="">
+<div class=" content">
 <form class="form" action="/exercise/create-exercise" method="post" enctype="multipart/form-data">
 
 <div class="has-text-centered pt-4 mt-6 ">
@@ -11,19 +11,19 @@
 <div class="create-exercise p-2 ">
 
 <label class="label">Ilustracion</label>
-<input class="input is-warning has-text-light" type="file" name="exercise-image">
+<input class="input is-warning has-text-light" type="file" name="exercise-image" required>
 
 <label class="label">Ejercicio</label>
-<input class="input is-warning has-text-light" type="text" name="exercise" placeholder="Nombre ejercicio" >
+<input class="input is-warning has-text-light" type="text" name="exercise" placeholder="Nombre ejercicio" required>
 
 <label class="label">Series</label>
-<input class="input is-warning has-text-light" type="number" name="series" placeholder="No.de series"  min="0" max="60">
+<input class="input is-warning has-text-light" type="number" name="series" placeholder="No.de series"  min="0" max="60" required>
 
 <label class="label">Repeticiones</label>
-<input class="input is-warning has-text-light" type="number" name="repetitions" placeholder="No. de repeticiones"  min="0" max="60">
+<input class="input is-warning has-text-light" type="number" name="repetitions" placeholder="No. de repeticiones"  min="0" max="60" required>
 
 <label class="label">Descanso</label>
-<input class="input is-warning has-text-light" type="number" name="breaks"  placeholder="seg"  min="0" max="60">
+<input class="input is-warning has-text-light" type="number" name="breaks"  placeholder="seg"  min="0" max="60" required>
 
 <label class="label">Snack Recomendado</label>
 <div>
@@ -41,8 +41,8 @@
 </div>
 </form>
 
-<div>
-  <img src="/images/create-exercise.gif" alt="">
+<div class="has-text-centered img-exercise">
+  <img src="/images/create-exercise.gif" >
 </div>
 
 {{else}}
@@ -52,3 +52,4 @@
 {{/if}}
 
 </div>
+

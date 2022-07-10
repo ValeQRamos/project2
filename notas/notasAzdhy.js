@@ -29,8 +29,8 @@ TODO 1 : MODELOS
 //en la nav agregar ejercicios(V)
 
 ?CLASE PROFES
-!conectar snacks con routines (V-A)
-!PREGUNTAR SI SE PUEDE EDITAR LO DEL USUARIO QUE CREA Y EL PUEDA SOLO EDITAR LO SUYO
+//conectar snacks con routines (V-A)
+PREGUNTAR SI SE PUEDE EDITAR LO DEL USUARIO QUE CREA Y EL PUEDA SOLO EDITAR LO SUYO
 ?PENDIENTES NUEVOS
 !detallar index (A)
 !checar si se puede añadir una ventana emergente para cuando algo no esta correcto o falta algo (V)
@@ -39,7 +39,7 @@ TODO 1 : MODELOS
 !LLENAR LA INFORMACION DE SNACKS (A)
 !LLENAR LA INFORMACION DE RUTINAS (A)
 !MODELO DE EJEMPLOS CAMBIAR A ENUM LA DIFICULTAD (V)
-!
+
 
 
 
