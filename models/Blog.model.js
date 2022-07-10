@@ -4,7 +4,11 @@ const {Schema,model} = mongoose
 const blogSchema = new Schema(
 {
     comment:{
+        
         type:String
+    },
+    owner:{
+
     },
 },{timeseries:true})
 
