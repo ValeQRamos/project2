@@ -9,10 +9,15 @@
 
            </div>
             <label class="label" >Titulo</label>
-            <input class="input is-warning has-text-light" type="text" name="title" placeholder="Titulo de la rutina">
+            <input class="input is-warning has-text-light" type="text" name="title" placeholder="Titulo de la rutina" required>
             <br>
             <label class="label">Dificultad</label>
-            <input class="input is-warning has-text-light" type="text" name="difficulty" placeholder="Grado de dificultad">
+            <select class="input" name="difficulty" required>
+              <option>Facil</option>
+              <option>Media</option>
+              <option>Dificil</option>
+            </select>
+            {{!-- <input class="input is-warning has-text-light" type="text" name="difficulty" placeholder="Grado de dificultad"> --}}
             <br>
             <label class="label">Beneficios</label>
             <textarea class="textarea is-warning has-text-light" name="description" cols="30" rows="5" placeholder="Beneficios"></textarea>
