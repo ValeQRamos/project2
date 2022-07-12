@@ -1,0 +1,55 @@
+
+{{#if userInSession}}
+
+<div class=" content">
+<form class="form" action="/exercise/create-exercise" method="post" enctype="multipart/form-data">
+
+<div class="has-text-centered pt-4 mt-6 ">
+  <img src="/images/nueva-rutina.png" width="400" height="300">
+</div>
+
+<div class="create-exercise p-2 ">
+
+<label class="label">Ilustracion</label>
+<input class="input is-warning has-text-light" type="file" name="exercise-image" required>
+
+<label class="label">Ejercicio</label>
+<input class="input is-warning has-text-light" type="text" name="exercise" placeholder="Nombre ejercicio" required>
+
+<label class="label">Series</label>
+<input class="input is-warning has-text-light" type="number" name="series" placeholder="No.de series"  min="0" max="60" required>
+
+<label class="label">Repeticiones</label>
+<input class="input is-warning has-text-light" type="number" name="repetitions" placeholder="No. de repeticiones"  min="0" max="60" required>
+
+<label class="label">Descanso</label>
+<input class="input is-warning has-text-light" type="number" name="breaks"  placeholder="seg"  min="0" max="60" required>
+
+<label class="label">Snack Recomendado</label>
+<div>
+  <select name="snacks" class="input">
+    {{#each snackInfo}}
+      <option value="{{_id}}"> {{name}} </option>
+    {{/each}}
+  </select>
+</div>
+
+<div class="has-text-centered p-4">
+<button class="button is-focused is-warning yellowBg" type="submit">Guardar</button>
+</div>
+
+</div>
+</form>
+
+<div class="has-text-centered img-exercise1">
+  <img src="/images/create-exercise.gif" >
+</div>
+
+{{else}}
+<div class="p-6 m-6 has-text-centered">
+<img src="/images/else-new-exercise.jpg" width="800" height="800">
+</div>
+{{/if}}
+
+</div>
+

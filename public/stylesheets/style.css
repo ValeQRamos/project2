@@ -1,3 +1,5 @@
+/* #FEE101    <---- color del logo*/
+/* #F0C200    <---- amarillo del wallpaper */
 body {
   padding: 50px;
   font: 14px "Lucida Grande", Helvetica, Arial, sans-serif;
@@ -7,6 +9,335 @@ a {
   color: #00b7ff;
 }
 
-h1 {
-  color: 15px;
+#background-image{
+  background-image: url('../images/gray.jpg');
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
+
+#background-image2{
+  height: 100%;
+}
+
+#background-image2{
+  background-image: url('../images/wallpaper2.jpg');
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
+.yellow{
+  color: #FEE101;
+}
+
+.yellowBg{
+  background-color: #FEE101;
+}
+
+
+
+.form-snack-create{
+  text-align: left;
+  padding-left: 350px;
+  width: 950px;
+}
+
+.pd-btn{
+  padding-left: 200px;
+  padding-top: 10px;
+}
+
+/*PROBLEMAS CON OPACIDAD */
+.anext{
+  width: 300px;
+  height: 300px;
+}
+
+.cardpie{
+  
+  display: flex;
+  flex-direction: row;
+  justify-content:space-evenly;
+}
+
+.size-noti{
+  width: 400px;
+  height: 420px;
+}
+
+.snack-edit{
+  width: 960px;
+  padding-left: 400px;
+}
+
+.snack-edit-btn{
+  text-align: center;
+}
+.create-exercise{
+  width: 560px;
+  padding-left: 20px;
+  padding-top: 50px;
+  
+}
+
+.img-snack{
+  width: 320px;
+  height: 200px;
+  border-radius: 10px;
+}
+
+
+.column{
+  display: flex;
+}
+
+/* Por Checar ! ! ! ! */
+
+.input{
+  background-color: #363636;
+  color: #fff;
+}
+
+.textarea{
+  background-color: #363636;
+  color: white;
+}
+
+.table-exercise{
+padding-left: 120px;
+}
+
+.placeholder {
+  color: white;
+}
+.input::placeholder {
+  color: #fff;
+  opacity: 0.3;
+}
+.textarea::placeholder {
+  color: #fff;
+  opacity: 0.3;
+}
+
+.center-edit-routine{
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+
+.img-edit-routine{
+padding-bottom: 100px;
+}
+
+.img1:hover{
+  border-radius:50%;
+  -webkit-border-radius:50%;
+  box-shadow: 0px 0px 15px 15px black;
+  -webkit-box-shadow: 0px 0px 15px 15px yellow;
+  transform: rotate(360deg);
+  -webkit-transform: rotate(360deg);
+  filter: opacity(.5);
+  }
+
+
+  .fondo-new-comment{
+    background-image: url("/images/fondo-blog.jpg");
+    background-size: cover;
+    background-repeat: no-repeat;
+    
+  }
+
+  .img-profile-pic{
+    border-radius: 10px;
+  }
+
+  .img-exercise{
+width: 300px;
+height: 200px;
+border-radius: 10px;
+  }
+
+  .img-profile-layout{
+
+    border-radius: 100px;
+  }
+
+  .edit-profile{
+    width: 600px;
+    height: 200px;
+    
+  }
+/* AQUI SE PUEDE MODIFICAR EL TAMAÑO DE LAS IMAGENES EN EL CARRUSEL*/
+.carousel-wrapper {
+  height: 400px;
+  position: relative;
+  width: 700px;
+  display: block;
+  margin: 50px auto ;
+}
+
+.carousel-item {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  padding: 25px 50px;
+  opacity: 0;
+  transition: all 0.5s ease-in-out;
+}
+.arrow{
+  border: solid rgb(255, 228, 78);
+  border-width: 0 3px 3px 0;
+  display: inline-block;
+  padding: 12px;
+}
+.arrow-prev {
+  left: 30px;
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%) rotate(135deg);
+
+}
+.arrow-next {
+  right: 30px;
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%) rotate(-45deg);
+}
+
+[id^= "item"] {
+  display: none;
+}
+.item-1 {
+  z-index: 2;
+  opacity: 1;
+  background: url("../images/test1.jpg");
+  background-size: cover;
+  /* border-radius: 5px; */
+}
+.item-2 {
+  background: url("../images/test2.jpg");
+  background-size: cover;
+  /* border-radius: 5px; */
+}
+.item-3 {
+  background: url("../images/test3.jpg");
+  background-size: cover;
+  /* border-radius: 5px; */
+}
+
+*:target ~ .item-1{
+  opacity: 0;
+}
+#item-1:target ~ .item-1 {
+  opacity: 1;
+
+}
+#item-2:target ~ .item-2, #item-3:target ~ .item-3 {
+  z-index: 3;
+  opacity: 1;
+} 
+
+
+.content{
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+}
+
+.img-exercise1{
+  padding-top: 200px;
+  
+}
+.img-exercise1 img{
+  width: 700px;
+  height: 400px;
+}
+
+.edit-profile{
+  padding-left: 400px;
+}
+
+/* Error messages */
+.error{
+  background-color: crimson;
+  border: 2px solid rgb(135, 14, 38);
+  box-shadow: 10px 10px rgb(18, 22, 27);
+  font-size: 21px;
+  color: beige;
+  margin-top: 10px;
+  padding: 10px;
+  width: 300px;
+  height: 125px;
+}
+
+
+
+/* -------  Testing  -------- */
+.custom-btn {
+  width: 130px;
+  height: 40px;
+  color: #fff;
+  border-radius: 5px;
+  padding: 10px 25px;
+  font-family: 'Lato', sans-serif;
+  font-weight: 500;
+  background: transparent;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  position: relative;
+  display: inline-block;
+  box-shadow:inset 2px 2px 2px 0px rgba(255,255,255,.5),
+  7px 7px 20px 0px rgba(0,0,0,.1),
+  4px 4px 5px 0px rgba(0,0,0,.1);
+  outline: none;
+}
+
+.btn-index {
+  background: #363636;
+  border: none;
+  z-index: 1;
+}
+.btn-index:after {
+  position: absolute;
+  content: "";
+  width: 100%;
+  height: 0;
+  top: 0;
+  left: 0;
+  z-index: -1;
+  border-radius: 5px;
+  background-color: #FEE101;
+  background-image: linear-gradient(315deg, #FEE101 0%, #fcf090 74%);
+  box-shadow:inset 2px 2px 2px 0px rgba(255,255,255,.5)
+  7px 7px 20px 0px rgba(0,0,0,.1),
+  4px 4px 5px 0px rgba(0,0,0,.1);
+  transition: all 0.3s ease;
+}
+.btn-index:hover {
+  color: #000;
+}
+.btn-index:hover:after {
+  top: auto;
+  bottom: 0;
+  height: 100%;
+}
+.btn-index:active {
+  top: 2px;
+}
+
+/* ----------Testing 2 ----------*/
+/* https://getcssscan.com/css-box-shadow-examples */
+
+.index-subtitle{
+  border-bottom: 1px solid #363636;
+}
+
+.carousel-wrapper{
+  box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+}
+
+.card-login{
+  box-shadow: rgb(38, 57, 77) 0px 20px 30px -10px;
 }

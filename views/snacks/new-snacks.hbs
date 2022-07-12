@@ -1,0 +1,107 @@
+{{#if userInSession}}
+
+<div class="p-3 background-snacks-create mt-6">
+<div class="has-text-centered pt-2"><img src="/images/nuevo snack.png" width="250" height="100"></div>
+
+<form class="form-screate " action="/snacks/create-snacks" method="post" enctype="multipart/form-data" >
+
+<div class="form-snack-create ">
+<div class="p-3  ">
+<div class="file  as-name is-fullwidth">
+<label class="file-label" >
+<input class="file-input" type="file" name="snack-image" required>
+<span class="file-cta">
+      <span class="file-icon">
+        <i class="fas fa-upload"></i>
+      </span>
+      <span class="file-label">
+        Elije un documento 
+      </span>
+    </span>
+    <span class="file-name">
+      image
+    </span>
+    </label>
+</div>
+<br>
+<label class="label" for="">Nombre:</label>
+<input   class="input is-warning has-text-light" type="text" name="name" placeholder="nombre" required>
+<br>
+<label class="label" for="">Reseña:</label>
+<input  class="input is-warning has-text-light" type="text" name="resena" placeholder="reseña" required>
+<br>
+<br>
+
+<label class="label" for="">Ingredientes:
+<input  class="input is-warning has-text-light" type="text" name="ingredients"  placeholder="Lista de ingredientes" required>
+(Separa cada uno de tus ingredientes con una coma " , ")
+</label>
+<br>
+
+<label class="label" for="">Instrucciones:
+<input  class="input is-warning has-text-light" type="text" name="instructions" placeholder="Lista de instrucciones" required>
+(Separa cada uno de tus instrucciones con una punto " . ")
+</label>
+<br>
+
+
+<label class="label" for="">Información Nutricional:</label>
+<input  class="input is-warning has-text-light" type="number" name="nutritionFacts" placeholder="calorias" min="1" required>
+<br>
+<label class="label" for="">Tiempo de preparación:</label>
+<input  class="input is-warning has-text-light" type="number" name="prepTime" placeholder="min"  min="1" max="60" required>
+<br>
+<label  class="label" for="">Tiempo de cocción:</label>
+<input  class="input is-warning has-text-light" type="number" name="cooktime" placeholder="min"  min="0" max="60" required>
+<br>
+<label class="label" for="">Rinde para:</label>
+<input class="input is-warning has-text-light" type="number" name="yiel" placeholder="porciones"  min="1" max="15" required>
+
+
+
+<div class="pd-btn">
+<button class="button is-responsive is-rounded  is-black is-focused " type="submit">Guardar</button>
+</div>
+
+
+</div>
+
+</div>
+
+</form>
+
+</div>
+{{else}}
+<div class="p-6 m-6">
+<div class="pb-4">
+<div class="tile is-parent cardpie">
+        <div class="p-4">
+        <article class="tile is-child notification is-primary size-noti p-3 has-background-grey-dark">
+          <p><a href="/images/info-nutri.jpg"> <img src="/images/info-nutri.jpg" ></a></p> <br>
+          <p class="is-size-5">¿Qué nos dice una etiqueta nutricional?</p><br><br>
+</article>
+</div>
+
+
+<div class="p-4">
+ <article class="tile is-child notification is-primary size-noti p-3 has-background-grey-darker">
+  <p><a href="/images/calorias.jpg"> <img src="/images/calorias.jpg" ></a></p> <br>
+          <p class="is-size-5">¿Qué son las calorías?</p><br>
+         
+</article>
+</div>
+
+<div class="p-4" >
+ <article class="tile is-child notification is-primary size-noti p-3 has-background-grey-dark">
+      <p><a href="/images/etiquetado.jpg"> <img src="/images/etiquetado.jpg"   ></a></p> <br>
+          <p class="is-size-5">¿Por que los sellos de "EXCESO.."?</p><br
+</article>
+</div>
+
+</div>
+</div>    
+</div>
+{{/if}}
+
+
+

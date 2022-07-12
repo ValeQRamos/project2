@@ -1,0 +1,44 @@
+<div class="p-6 m-6 ">
+<div class="has-text-centered"><img src="/images/lista-de-rutinas.png" width="400" height="300"></div>
+
+<div class="table-exercise">
+<table class="table is-striped">
+<thead>
+    <tr>
+       {{#if userInSession}}
+        <th>Opciones</th>
+        {{/if}}
+        <th>Ilustracion</th>
+        <th>Ejercicio</th>
+        <th>Series</th>
+        <th>Repeticiones</th>
+        <th>Descansos</th>
+        <th>snacks</th>
+    </tr>
+</thead>
+
+{{#each exercise}}
+<tr>
+   {{#if ../userInSession}}
+    <td>
+        <a href="/exercise/exercise-edit/{{id}}">Editar</a>
+        <a href="/exercise/exercise-delete/{{id}}">Borrar</a>
+    </td>
+    {{/if}}
+    <td><figure><img src="{{imageUrl}}" width="400" height="400"></figure> </td>
+    <td>{{exercise}}</td>
+    <td>{{series}}</td>
+    <td>{{repetitions}}</td>
+    <td>{{breaks}}seg</td>
+    {{#each snacks}}
+        <td>{{this.name}}</td>
+    {{/each}}
+
+
+
+</tr>
+{{/each}}
+</table>
+</div>
+</div>
+

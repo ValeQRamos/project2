@@ -1,17 +1,57 @@
-<form action="/auth/signup" method="POST">
-   <label> Username
-      <input type="text" name="username">
-   </label>
-   <label> Password
-      <input type="password" name="password">
-   </label>
- <label> email
-      <input type="text" name="email">
-   </label>
+<div id="background-image2">
+  <br>
+  <br>
+  <br>
+  <br>
+  <br>
 
-   <button type="submit">Submit</button>
-</form>
+<section class="section">
+  <div class="container">
+    <div class="columns is-vcentered">
+      <div class="column is-6">
+        <form action="/signup" method="POST">
+          <h2 class="title">Crea Una Cuenta</h2>
 
-{{#if errorMessage}}
-   {{errorMessage}}
-{{/if}}
+          <label class="label mt-5"> Nombre de Usuario</label>
+          <input class="input is-warning has-text-light" type="text" name="username" placeholder="ironhacker" />
+
+          <label class="label mt-5"> Correo</label>
+          <input class="input is-warning has-text-light" type="email" name="email" placeholder="rockstar@ironhack.com" />
+
+          <label class="label mt-5">Contraseña</label>
+          <input class="input is-warning has-text-light" type="password" name="password" placeholder="********" />
+
+          <div>
+            <button class="custom-btn btn-index mt-5 is-size-6" type="submit">Crear</button>
+          </div>
+
+          {{#if errorMessage}}
+            <p class="error">{{errorMessage}}</p>
+          {{/if}}
+        </form>
+
+      </div>
+
+      <div class="column is-6"> 
+        <div class="card m-2 card-login">
+          <div class="card-image">
+            <figure class="image">
+              <img src="/images/signup00.jpg" alt="loginphoto">
+            </figure>
+          </div>
+          <div class="card-content has-background-dark">
+            <div class="content">
+              <h1 class=" has-text-light">Crea una cuenta para ver , crear y editar rutinas y recetas de snacks</h1>
+            </div>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+</div>
+
+
+

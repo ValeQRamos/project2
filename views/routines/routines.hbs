@@ -1,0 +1,43 @@
+
+<section class="section has-background-grey-light" >
+
+<div class="pt-6">
+ <div class="has-text-centered"><img src="/images/ejercicios-guiados.png" width="400" height="300"></div>
+</div>
+
+  <div class="container">
+    <div class="columns is-multiline">
+      {{#each routine}}
+        <div class="column is-4"> 
+          <div class="card has-background-black-ter">
+
+            <div class="card-image has-text-centered p-3">
+              <figure>   
+                <img class="img-exercise" src="{{imageUrl}}">
+              </figure>
+            </div>
+
+            <div class="card-content pt-1">
+              <h1 class="is-size-4 has-text-centered has-text-weight-bold mb-3">
+                <span class="yellow">{{title}}</span>
+              </h1>
+              <p class="is-size-5 has-text-light has-text-centered has-text-weight-bold mb-2">
+                <span class="yellow">Dificultad</span> {{difficulty}}
+              </p>
+              <p class="is-size-6 has-text-centered has-text-light">
+                <span class="is-size-5 has-text-weight-bold yellow">Beneficios </span>{{description}}
+              </p>
+            </div>
+            {{#if ../userInSession}}
+            <footer class="card-footer has-background-black-ter">
+                <a class="button is-small is-focused is-warning yellowBg m-2 mr-3" href="routines/{{_id}}/edit">Edit</a>
+                <a class="button is-small is-focused is-info is-light  m-2" href="routines/{{_id}}/delete">Delete</a>
+            </footer>
+            {{/if}}
+          </div>
+        </div>
+      {{/each}}
+    </div>
+  </div>
+
+</section>

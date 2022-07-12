@@ -4,14 +4,111 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta http-equiv="X-UA-Compatible" content="ie=edge" />
-    <title>{{appTitle}}</title>
+    <title>{{appTitle}}&#128170;</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.4/css/bulma.min.css">
     <link rel="stylesheet" href="/stylesheets/style.css" />
   </head>
 
-  <body>
+  <body class="p-0">
 
+      <nav class="navbar is-dark is-fixed-top">
+        <div class="navbar-brand">
+          <div class="navbar-item">
+            <a href="/"><img src="/images/logo.png" alt="logo" style="max-height:60px" class="py-2 px-2"></a>
+          </div>
+          <a class="navbar-burger" id="burger">
+            <span></span>
+            <span></span>
+            <span></span>
+          </a>
+        </div>
+         {{#if userInSession}} 
+        <div class="navbar-menu" id="nav-links">
+        <div class="navbar-end">
+
+        <div class="navbar-item has-dropdown is-hoverable yellow">
+        <a class="navbar-link is-size-6 ">
+         <span class="yellow"> More </span>
+        </a>
+
+        <div class="navbar-dropdown">
+          <a href="/blog/blog-list" class="navbar-item">
+            Blog &#128172;
+          </a>
+        </div>
+        </div>
+
+  
+           <div class="navbar-item has-dropdown is-hoverable yellow">
+            <a href="/userProfile" class="navbar-link is-size-6 ">
+            <img class="img-profile-layout" src="{{userInSession.profile_pic}}" >
+            </a>
+            <div class="navbar-dropdown">
+            <a href="/edit-user" class="navbar-item">
+             Editar perfil &#128100;
+            </a>
+             </div>
+            </div>
+
+            <a href="/logout" class="navbar-item">
+              <span class="is-size-6 yellow">Logout</span>
+            </a>
+          </div>
+
+          {{else}}
+           <div class="navbar-menu" id="nav-links">
+          <div class="navbar-end">
+
+            <div class="navbar-item has-dropdown is-hoverable yellow">
+             <a class="navbar-link is-size-6 ">
+              <span class="yellow"> Conoce más &#128526; </span>
+             </a>
+
+            <div class="navbar-dropdown">
+              <a href="/blog/blog-list" class="navbar-item">
+               <span class="is-size-6 ">Blog &#128172;</span>
+              </a>
+            <a href="/routines/routines" class="navbar-item">
+              <span class="is-size-6 ">Conoce los Ejercicios &#129336;</span>
+            </a>
+            </div>
+            </div>
+
+             <a href="/signup" class="navbar-item">
+              <span class="is-size-6 yellow">Signup &#128276;</span>
+            </a>
+            <a href="/login" class="navbar-item">
+            <img src="../images/login.jpg.png"src="" alt="">
+              <span class="is-size-6 yellow"> Login</span> 
+            
+            </a>
+           
+          </div>
+          {{/if}}
+        </div>
+      </nav>
     {{{body}}}
-
+<footer class="footer p-3 has-background-dark">
+  <div class="content has-text-centered is-flex-direction-column	">
+    <p class="is-size-6 has-text-light"> 💻
+      <strong class="has-text-light">Power Training</strong> 
+      by <span class="yellow is-italic">Azdhy Galvan</span> 
+      and <span class="yellow is-italic">Vale Quiroga</span> 💻
+    </p>
+    <p class="has-text-light">Visita nuestras redes sociales</p>
+    <div>
+      <a class="mr-4" href="https://www.facebook.com/theironhack/">
+        <img src="/images/face.png" alt="facebook logo" width="30" height="30">
+      </a>
+      <a href="https://twitter.com/ironhack">
+        <img src="/images/twitter.png" alt="twitter logo" width="30" height="30">
+      </a>
+      <a class="ml-4" href="https://www.instagram.com/ironhack/">
+        <img src="/images/instagram.png" alt="instagram logo" width="30" height="30">
+      </a>
+      </div>
+  </div>
+</footer>
     <script src="/js/script.js"></script>
   </body>
 

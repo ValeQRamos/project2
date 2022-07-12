@@ -15,20 +15,32 @@ const hbs = require("hbs");
 
 const app = express();
 
-// ℹ️ This function is getting exported from the config folder. It runs most pieces of middleware
+
 require("./config")(app);
 
 const capitalized = require("./utils/capitalized");
-const projectName = "ModuleProject2";
+const projectName = "Power Training";
 
-app.locals.appTitle = `${capitalized(projectName)} created with IronLauncher`;
+app.locals.appTitle = `${capitalized(projectName)}`;
 
 // 👇 Start handling routes here
 const index = require("./routes/index.routes");
 app.use("/", index);
 
-const authRoutes = require("./routes/auth.routes");
-app.use("/auth", authRoutes);
+const authRouter = require('./routes/auth.routes');
+app.use('/', authRouter);
+
+const snackRouter = require('./routes/snacks.routes');
+app.use('/snacks',snackRouter)
+
+const routineRouter = require('./routes/routine.routes');
+app.use('/routines',routineRouter)
+
+const exerciseRouter= require("./routes/exercise.routes")
+app.use("/exercise",exerciseRouter)
+
+const blogRouter = require("./routes/blog.routes")
+app.use("/blog",blogRouter)
 
 // ❗ To handle errors. Routes that don't exist or errors that you handle in specific routes
 require("./error-handling")(app);
