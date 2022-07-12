@@ -8,7 +8,7 @@ const blogSchema = new Schema(
         type:String
     },
     owner:{
-
+    type:Schema.Types.ObjectId, ref:'user'   
     },
 },{timeseries:true})
 

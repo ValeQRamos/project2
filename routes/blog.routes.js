@@ -1,9 +1,11 @@
 const router = require ('express').Router()
 const BlogModel = require ('../models/Blog.model')
+const UserModel = require("../models/User.model")
 
 router.get('/blog-list',(req,res,next)=>{
 
     BlogModel.find()
+    .populate({path: 'owner', model:UserModel})
     .then(comments=>{
         console.log("Que es mi comments",comments)
         res.render("blog/blogs",{comments,userInSession: req.session.currentUser})
@@ -17,8 +19,9 @@ router.get('/create-comment',(req,res,next)=>{
 
 router.post("/create-comment",(req,res,next)=>{
 
+    const {_id} = req.session.currentUser
 
-BlogModel.create(req.body)
+BlogModel.create({...req.body,owner:_id})
 
 .then(()=>res.redirect("blog-list"))
 .catch(error => next(error))
