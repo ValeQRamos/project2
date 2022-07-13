@@ -7,7 +7,8 @@ const userSchema = new Schema(
       type: String,
       trim: true,
       required: [true, 'Nombre de usuario requerido.'],
-      unique: true
+      unique: true,
+      googleID: String,
     },
     email: {
       type: String,

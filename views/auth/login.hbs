@@ -11,7 +11,7 @@
       <div class="column is-6">
 
         <form action="/login" method="POST">
-          <h1 class="title">Iniciar Sesion</h1>
+          <h1 class="title lettle-signup">Iniciar Sesion</h1>
 
           <label class="label mt-5">Correo</label>
           <input class="input is-warning has-text-light" type="email" name="email" placeholder="rockstar@ironhack.com" />
@@ -23,6 +23,7 @@
             <button class="custom-btn btn-index mt-5 is-size-6" type="submit">Conectarse</button>
           </div>
 
+          <a href="/google" class="button">Sign in with Google</a>
           {{#if errorMessage}}
             <p class="error">{{errorMessage}}</p>
           {{/if}}
@@ -39,7 +40,7 @@
           </div>
           <div class="card-content has-background-dark">
             <div class="content">
-              <h1 class="has-text-light">Conectate a tu cuenta para ver , crear y editar rutinas y recetas de snacks</h1>
+              <h1 class="has-text-light">Conectate a tu cuenta para ver,crear, editar rutinas y recetas de snacks</h1>
             </div>
           </div>
         </div>
