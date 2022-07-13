@@ -2,7 +2,7 @@
 <br>
 <br>
 <br>
-{{#if userInSession}}
+{{#if userInSession }}
 <section class="section has-background-white-ter">
     <div class="container">
         <div class="has-text-centered">
@@ -127,9 +127,123 @@
 
 
 
+{{#else if googleID}}
+<section class="section has-background-white-ter">
+    <div class="container">
+        <div class="has-text-centered">
+          <img class="img-profile-pic" src="{{profile.photos}}" width="300" height="300" alt="" srcset="">
+          <h2 class="title has-text-centered mb-0">
+            Hola <span class="yellow">{{profile.displayName}}</span> &#128522;
+          </h2>
+          
+          <p class="subtitle mt-1 pb-6">Bienvenido a tu perfil</p>
+         {{!-- <a class="button is-small is-danger mb-5" href="/edit-user">Editar foto</a>--}}
+        </div>
 
-{{!-- Abcdef123 --}}
-{{!-- agregar los botones de nueva rutina y nuevo snack --}}
+        <div class="columns is-multiline">
+          <div class="column is-3">
+            <div class="card">
+              <div class="card-image">
+                <figure class="image">
+                  <img src="/images/snacks01.jpg" alt="snacks">
+                </figure>
+              </div>
+              <div class="card-content">
+                <h1 class="subtitle has-text-centered">Lista de Snacks &#129386;</h1>
+                <div class="has-text-centered">
+                  <a class="button is-dark" href="/snacks/snacks-list"> Ver Lista de Snacks </a>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="column is-3">
+            <div class="card">
+              <div class="card-image">
+                <figure class="image">
+                  <img src="/images/snacks02.jpg" alt="snacks">
+                </figure>
+              </div>
+              <div class="card-content">
+                <h1 class="subtitle has-text-centered">Crear un Snack &#129369;</h1>
+                <div class="has-text-centered">
+                  <a class="button is-dark" href="/snacks/create-snacks">Crear Snacks </a>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="column is-3">
+            <div class="card">
+              <div class="card-image">
+                <figure class="image">
+                  <img src="/images/ejercicio00.jpg" alt="snacks">
+                </figure>
+              </div>
+              <div class="card-content">
+                <h1 class="subtitle has-text-centered">Lista de Rutinas &#129336; </h1>
+                <div class="has-text-centered">
+                  <a class="button is-dark" href="/exercise/exercise-list"> Ver Lista de rutinas 	</a>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="column is-3">
+            <div class="card">
+              <div class="card-image">
+                <figure class="image">
+                  <img src="/images/ejercicio01.jpg" alt="snacks">
+                </figure>
+              </div>
+              <div class="card-content">
+                <h1 class="subtitle has-text-centered">Crear una Rutina &#129342;</h1>
+                <div class="has-text-centered">
+                  <a class="button is-dark" href="/exercise/create-exercise">Crear una rutina</a>
+                </div>
+              </div>
+            </div>
+          </div>
+
+           <div class="column is-3">
+            <div class="card">
+              <div class="card-image">
+                <figure class="image">
+                  <img src="/images/lista-ejercicio-guiado.jpg" alt="snacks">
+                </figure>
+              </div>
+              <div class="card-content">
+                <h1 class="subtitle has-text-centered">Lista de Ejercicios Guiados &#127947;</h1>
+                <div class="has-text-centered">
+                  <a class="button is-dark" href="/routines/routines">Lista de ejercios Guiados</a>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="column is-3">
+            <div class="card">
+              <div class="card-image">
+                <figure class="image">
+                  <img src="/images/crear-ejercicio-guiado.jpg" alt="snacks">
+                </figure>
+              </div>
+              <div class="card-content">
+                <h1 class="subtitle has-text-centered">Crear un Ejercicios Guiado &#129336;</h1>
+                <div class="has-text-centered">
+                  <a class="button is-dark" href="/routines/create-routine">Crear un Ejercicios Guiado</a>
+                </div>
+              </div>
+            </div>
+          </div>
+
+        </div>
+
+    </div>
+</section>
+
+
+
 {{else}}
     <p>Todavia no estas conectado!, Lo siento</p>
 {{/if}}

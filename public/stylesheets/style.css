@@ -170,9 +170,9 @@ border-radius: 10px;
   }
 /* AQUI SE PUEDE MODIFICAR EL TAMAÑO DE LAS IMAGENES EN EL CARRUSEL*/
 .carousel-wrapper {
-  height: 400px;
+  height: 500;
   position: relative;
-  width: 700px;
+  width: 750px;
   display: block;
   margin: 50px auto ;
 }
@@ -213,17 +213,17 @@ border-radius: 10px;
 .item-1 {
   z-index: 2;
   opacity: 1;
-  background: url("../images/test1.jpg");
+  background: url("../images/index1.png");
   background-size: cover;
   /* border-radius: 5px; */
 }
 .item-2 {
-  background: url("../images/test2.jpg");
+  background: url("../images/index2.png");
   background-size: cover;
   /* border-radius: 5px; */
 }
 .item-3 {
-  background: url("../images/test3.jpg");
+  background: url("../images/index3.png");
   background-size: cover;
   /* border-radius: 5px; */
 }
@@ -381,6 +381,15 @@ border-radius: 10px;
 }
 
 
+.index-parrafo{
+  font-family:monospace;
+}
+.lettle-signup{
+  font-family: monospace;
+}
+=======
+
 .profileName{
   text-shadow: 1px 1px 2px #363636;
 }
+

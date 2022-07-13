@@ -5,6 +5,80 @@ const saltRounds = 10;
 const User = require('../models/User.model')
 const { isLoggedIn, isLoggedOut } = require('../middleware/route-guard.js');
 const uploade = require ("../config/cloudinary.config") 
+const GoogleStrategy = require("passport-google-oauth20").Strategy
+const passport = require("passport")
+
+//inicio de sesion con GOOGLE
+passport.use(new GoogleStrategy({
+  clientID: process.env.GOOGLE_CLIENT_ID,
+  clientSecret: process.env.GOOGLE_CLIENT_SECRET,
+  callbackURL: "/google/callback"
+},
+function (accessToken, refreshToken, profile,done){
+  console.log("que es . mi",profile)
+ /////done(null,profile)
+
+  User.findOne({ googleID: profile.id })
+    .then(user => {
+      if (user) {
+        done(null, user);
+        return;
+      }
+
+      User.create({ googleID: profile.id })
+        .then(newUser => {
+          done(null, newUser);
+        })
+        .catch(err => done(err)); // closes User.create()
+    })
+    .catch(err => done(err)); // closes User.findOne()
+})
+
+)
+
+passport.serializeUser((user,done)=>{
+  done(null,user)
+})
+
+passport.deserializeUser((user,done)=>{
+done(null,user)
+})
+
+const CLIENT_URL  = "http://localhost:3000/"
+
+router.get("/login/success",(req,res,next)=>{
+console.log("que es ....--->",req.user)
+  if(req.user){
+    res.status(200).json({
+      success:true,
+      message:"sucessfull",
+      user:req.user,
+
+    })
+  }
+
+})
+
+
+router.get("/login/failed",(req,res,next)=>{
+  if(req.user){
+  res.status(401).json({
+    success:false,
+    message:"failure",
+
+  })
+}
+})
+
+router.get("/google", passport.authenticate("google",{scope:["profile"]}));
+
+router.get("/google/callback",passport.authenticate("google",{
+  successRedirect:CLIENT_URL,
+  failureRedirect:"/login/failed"
+}))
+
+
+
 
 // Signup ------
 router.get('/signup', isLoggedOut ,(req, res) => res.render('auth/signup'));
@@ -95,11 +169,9 @@ router.get("/logout", isLoggedIn, (req, res) => {
     res.redirect("/");
   });
 });
-//sale indefinido en el post 
-//pero en el get si manda la foto 
-// Edit user profile picture
+
 router.get('/edit-user', isLoggedIn,(req, res, next) => {
-  // console.log('edit user ---->', req.session.currentUser)
+  
   res.render('users/edit-user', {userInSession: req.session.currentUser})
 })
 
@@ -112,7 +184,7 @@ router.post('/edit-user', isLoggedIn,uploade.single('profile_pic'), (req, res, n
   User.findByIdAndUpdate(req.session.currentUser._id, {...allUser, profile_pic},{new:true})
 
     .then(updatedPhoto =>{
-      //console.log("que es ",updatedPhoto)
+     
       req.session.currentUser = updatedPhoto
 
       res.redirect('userProfile')
