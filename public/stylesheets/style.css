@@ -149,6 +149,7 @@ padding-bottom: 100px;
 
   .img-profile-pic{
     border-radius: 10px;
+    box-shadow: rgba(50, 50, 93, 0.25) 0px 6px 12px -2px, rgba(0, 0, 0, 0.3) 0px 3px 7px -3px;
   }
 
   .img-exercise{
@@ -169,9 +170,9 @@ border-radius: 10px;
   }
 /* AQUI SE PUEDE MODIFICAR EL TAMAÑO DE LAS IMAGENES EN EL CARRUSEL*/
 .carousel-wrapper {
-  height: 400px;
+  height: 500;
   position: relative;
-  width: 700px;
+  width: 750px;
   display: block;
   margin: 50px auto ;
 }
@@ -212,17 +213,17 @@ border-radius: 10px;
 .item-1 {
   z-index: 2;
   opacity: 1;
-  background: url("../images/test1.jpg");
+  background: url("../images/index1.png");
   background-size: cover;
   /* border-radius: 5px; */
 }
 .item-2 {
-  background: url("../images/test2.jpg");
+  background: url("../images/index2.png");
   background-size: cover;
   /* border-radius: 5px; */
 }
 .item-3 {
-  background: url("../images/test3.jpg");
+  background: url("../images/index3.png");
   background-size: cover;
   /* border-radius: 5px; */
 }
@@ -274,7 +275,7 @@ border-radius: 10px;
 
 
 
-/* -------  Testing  -------- */
+/* -------  Button 1  -------- */
 .custom-btn {
   width: 130px;
   height: 40px;
@@ -327,6 +328,43 @@ border-radius: 10px;
   top: 2px;
 }
 
+/* -------  Button 2  -------- */
+
+.btn-index2 {
+  background: #FEE101;
+  border: none;
+  z-index: 1;
+  color: #363636;
+  font-weight: bolder;
+}
+.btn-index2:after {
+  position: absolute;
+  content: "";
+  width: 100%;
+  height: 0;
+  top: 0;
+  left: 0;
+  z-index: -1;
+  border-radius: 5px;
+  background-color: #363636;
+  background-image: linear-gradient(315deg, #363636 0%, #646464 74%);
+  box-shadow:inset 2px 2px 2px 0px rgba(255,255,255,.5)
+  7px 7px 20px 0px rgba(0,0,0,.1),
+  4px 4px 5px 0px rgba(0,0,0,.1);
+  transition: all 0.3s ease;
+}
+.btn-index2:hover {
+  color: beige;
+}
+.btn-index2:hover:after {
+  top: auto;
+  bottom: 0;
+  height: 100%;
+}
+.btn-index2:active {
+  top: 2px;
+}
+
 /* ----------Testing 2 ----------*/
 /* https://getcssscan.com/css-box-shadow-examples */
 
@@ -341,3 +379,17 @@ border-radius: 10px;
 .card-login{
   box-shadow: rgb(38, 57, 77) 0px 20px 30px -10px;
 }
+
+
+.index-parrafo{
+  font-family:monospace;
+}
+.lettle-signup{
+  font-family: monospace;
+}
+=======
+
+.profileName{
+  text-shadow: 1px 1px 2px #363636;
+}
+
