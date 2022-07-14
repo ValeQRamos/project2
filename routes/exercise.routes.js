@@ -19,7 +19,6 @@ const {exercise,series,repetitions,breaks,snacks}= req.body
 ExerciseModel.create({exercise,series,repetitions,breaks,snacks,imageUrl:req.file.path})
 .then(()=> res.redirect("exercise-list"))
 .catch(error=>next (error))
-console.log(req.body.snacks)
 })
 
 // read
