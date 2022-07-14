@@ -8,8 +8,7 @@ const fileUploader = require("../config/cloudinary.config")
 router.get("/snacks-list",(req,res,next)=>{
     
     SnackModel.find()
-    .then(snacks=>{   
-        console.log("que es..",req.session)                     
+    .then(snacks=>{
         res.render("snacks/snacks",{snacks,userInSession: req.session.currentUser})
     })
     .catch(error=>{

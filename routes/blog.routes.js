@@ -7,13 +7,11 @@ router.get('/blog-list',(req,res,next)=>{
     BlogModel.find()
     .populate({path: 'owner', model:UserModel})
     .then(comments=>{
-        // console.log("Que es mi comments",comments)
         res.render("blog/blogs",{comments,userInSession: req.session.currentUser})
     })
 })
 
 router.get('/create-comment',(req,res,next)=>{
-    console.log("que es mi req.session.currenUser",req.session.currentUser)
     res.render("blog/new-comment",{userInSession: req.session.currentUser})
 })
 
