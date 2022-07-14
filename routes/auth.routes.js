@@ -109,7 +109,8 @@ router.post('/signup', isLoggedOut ,(req, res, next) => {
         passwordHash: hashedPassword
       });
     })
-    .then(() => {
+    .then((user) => {
+      req.session.currentUser = user
       res.redirect('/userProfile');
     })
     .catch(error => {
@@ -149,7 +150,7 @@ router.post('/login', isLoggedOut ,(req, res, next) => {
         console.log('Que es user --->',user)
         console.log('Que es req.session --->', req.session)
 
-        res.redirect('userProfile');
+        res.redirect('/userProfile');
       } else {
         res.render('auth/login', { errorMessage: 'Contraseña incorrecta.' });
       }
