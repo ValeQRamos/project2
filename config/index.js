@@ -8,6 +8,7 @@ const session = require("express-session");
 const MongoStore = require("connect-mongo");
 const MONGO_URI = require("../utils/consts");
 const mongoose = require('mongoose');
+const { none } = require("./cloudinary.config");
 // Middleware configuration
 module.exports = (app) => {
   // In development environment the app logs
@@ -40,7 +41,7 @@ module.exports = (app) => {
         mongoUrl: MONGO_URI,
       }),
       cookie: {
-        sameSite: process.env.NODE_ENV === 'production' ? 'none' : 'lax',
+        sameSite: none,
         secure: process.env.NODE_ENV === 'production',
         httpOnly: true,
       },
