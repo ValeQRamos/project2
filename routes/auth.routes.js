@@ -15,8 +15,7 @@ passport.use(new GoogleStrategy({
   callbackURL: "/google/callback"
 },
 function (accessToken, refreshToken, profile,done){
-  console.log("que es . mi",profile)
- /////done(null,profile)
+
   User.findOne({ googleID: profile.id })
     .then(user => {
       console.log("Que es mi USER",user)
@@ -50,7 +49,6 @@ done(null,user)
 const CLIENT_URL  = "http://localhost:3000/"
 
 router.get("/login/success",(req,res,next)=>{
-console.log("que es ....--->",req.user)
   if(req.user){
     res.status(200).json({
       success:true,
@@ -149,8 +147,6 @@ router.post('/login', isLoggedOut ,(req, res, next) => {
       } else if (bcryptjs.compareSync(password, user.passwordHash)) {
         req.session.currentUser = user;
 
-        console.log('Que es user --->',user)
-        console.log('Que es req.session --->', req.session)
 
         res.redirect('/userProfile');
       } else {
@@ -162,7 +158,6 @@ router.post('/login', isLoggedOut ,(req, res, next) => {
 
 // UserProfile ------
 router.get('/userProfile', isLoggedIn ,(req, res) => {
-  //? console.log("que es..",req.session)
   res.render('users/user-profile', { userInSession: req.session.currentUser });
 });
 
