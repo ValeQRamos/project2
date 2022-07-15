@@ -18,13 +18,17 @@ function (accessToken, refreshToken, profile,done){
 
   User.findOne({ googleID: profile.id })
     .then(user => {
+      console.log("Que es mi USER",user)
       if (user) {
         done(null, user);
         return;
       }
-
-      User.create({ googleID: profile.id })
+     //crear un password facke y crassar 
+    //
+      User.create({ googleID: profile.id,username:profile.displayName,profile_pic:profile.photos[0].value,passwordHash:"Perrito123", email:`${profile.id}@demo.com`})
         .then(newUser => {
+          console.log("Que es mi USER",newUser)
+        
           done(null, newUser);
         })
         .catch(err => done(err)); // closes User.create()
@@ -69,11 +73,11 @@ router.get("/login/failed",(req,res,next)=>{
 
 router.get("/google", passport.authenticate("google",{scope:["profile"]}));
 
-router.get("/google/callback",passport.authenticate("google",{
-  successRedirect:CLIENT_URL,
-  failureRedirect:"/login/failed"
-}))
-
+router.get("/google/callback",passport.authenticate("google",{failureRedirect:'/'}),
+function(req,res){
+  req.session.currentUser= req.user 
+  res.redirect('/userProfile')
+})
 
 
 
@@ -144,7 +148,7 @@ router.post('/login', isLoggedOut ,(req, res, next) => {
         req.session.currentUser = user;
 
 
-        res.redirect('userProfile');
+        res.redirect('/userProfile');
       } else {
         res.render('auth/login', { errorMessage: 'Contraseña incorrecta.' });
       }

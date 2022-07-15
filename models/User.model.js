@@ -8,11 +8,11 @@ const userSchema = new Schema(
       trim: true,
       required: [true, 'Nombre de usuario requerido.'],
       unique: true,
-      googleID: String,
+     
     },
     email: {
       type: String,
-      required: [true, 'Email es requerido.'],
+      //required: [true, 'Email es requerido.'],
       match: [/^\S+@\S+\.\S+$/, 'Por favor ingresa un email valido.'],
       unique: true,
       lowercase: true,
@@ -20,12 +20,13 @@ const userSchema = new Schema(
     },
     passwordHash: {
       type: String,
-      required: [true, 'Contraseña es requerisa.']
+      required: [true, 'Contraseña es requerida.']
     },
     profile_pic:{
       type:String,
       default:"https://res.cloudinary.com/dhgfid3ej/image/upload/v1558806705/asdsadsa_iysw1l.jpg",
-    }
+    },
+    googleID: String,
   },
   {
     timestamps: true
